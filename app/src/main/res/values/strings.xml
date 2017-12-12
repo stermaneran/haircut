@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">eran</string>
+    <string name="title_activity_sign_in">signIn</string>
+    <string name="title_activity_add_customer">AddCustomer</string>
+    <string name="title_activity_add_appointment">AddAppointment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_readme">readme</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_prifile">prifile</string>
+</resources>

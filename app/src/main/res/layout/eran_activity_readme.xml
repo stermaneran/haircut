@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BarberShop\n\n
+
+this application improves the experience of a barber to manage his clients and appointments.\n
+On our platform you can discover the best way to book an appointment and then seamlessly pay and tip.\n
+In addition, we built a management system for barbers and shop owners to effectively run their business and get new customers.\n
+\n
+Getting Started:\n
+\n
+These instructions will get you a copy of the project up and running on your android device for development and testing purposes.\n
+See deployment for notes on how to deploy the project on a live system.\n
+\n
+Prerequisites:\n
+\n
+Download barberShop application and install it.\n
+\n
+At the initial login you will sign up for the app.\n
+\n
+example:\n
+\n
+first name: israel\n
+last name:  israely\n
+user name: israelvo\n
+email: israelvo@gmail.com\n
+password: 123456\n
+city: laplend\n
+street: eraivesaran\n
+\n
+wait until the registration process is done and you get the message - successfully signed up with (your user name).\n
+\n
+\n
+Built With:\n
+\n
+Android Studio - The Official IDE for Android.\n
+Fire Base - Google's mobile platform that helps you quickly develop high-quality apps and grow your business.\n
+\n
+\n
+Authors:\n
+\n
+Sefi Shalom - Technical consultant at Pepperi.\n
+Shay Cohen - Student at Ariel University.\n
+Dima Volgin Shufman - Security Operations Center (SOC) Analyst. at Citadel Consulting.\n
+Eran Sterman - Student at Ariel University.\n
+\n
+\n
+License:\n
+\n
+This project is licensed under the Ariel University License.\n
+\n
+\n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+</RelativeLayout>
