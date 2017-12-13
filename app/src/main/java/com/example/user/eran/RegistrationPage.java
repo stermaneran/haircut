@@ -1,4 +1,5 @@
 package com.example.user.eran;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -239,6 +240,7 @@ public class RegistrationPage extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             profilePictureView.setImageBitmap(imageBitmap);
+            Toast.makeText(getApplicationContext(), "Camera picture Uploaded ", Toast.LENGTH_LONG).show();
             encodeBitmapAndSaveToFirebase(imageBitmap);
         
        
@@ -254,16 +256,20 @@ public class RegistrationPage extends AppCompatActivity {
 
     @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
-        Bitmap bm=null;
-        if (data != null) {
-            try {
-                bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
-            } catch (IOException e) {
-                e.printStackTrace();
+        if (filePath.toString().endsWith(".jpeg") || filePath.toString().endsWith(".png")) {
+            Bitmap bm = null;
+            if (data != null) {
+                try {
+                    bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        }
 
-        profilePictureView.setImageBitmap(bm);
+            profilePictureView.setImageBitmap(bm);
+        } else {
+            toastMessage("invalid photo");
+        }
     }
 
     // to check if user filled all the required fieds
@@ -367,7 +373,7 @@ public class RegistrationPage extends AppCompatActivity {
                             progressDialog.dismiss();
 
                             //and displaying a success toast
-                            Toast.makeText(getApplicationContext(), "File Uploaded ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Picture Uploaded ", Toast.LENGTH_LONG).show();
 
                             mStorageRef.child("profiles/" + mAuth.getCurrentUser().getUid() + ".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
@@ -412,7 +418,6 @@ public class RegistrationPage extends AppCompatActivity {
         //if there is not any file
         else {
             new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/eran-8c9cf.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=1d1f6e41-5023-40e0-9e5a-60baacefa802").save();
-            //toastMessage("added user " + email);
             Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
             startActivityForResult(myIntent, 0);
             finish();
