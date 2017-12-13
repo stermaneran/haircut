@@ -2,6 +2,7 @@ package com.example.user.eran;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -199,7 +200,9 @@ public class RegistrationPage extends AppCompatActivity {
 
     @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
-        if (filePath.toString().endsWith(".jpeg") || filePath.toString().endsWith(".png")) {
+        ContentResolver cR = this.getContentResolver();
+        String type = cR.getType(filePath);
+        if (type.endsWith("jpeg") || type.endsWith("png") || type.endsWith("jpg")) {
             Bitmap bm = null;
             if (data != null) {
                 try {
