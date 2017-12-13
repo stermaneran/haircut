@@ -1,7 +1,10 @@
 package com.example.user.eran;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
 
 
 public class profilePage extends AppCompatActivity {
@@ -92,14 +97,27 @@ public class profilePage extends AppCompatActivity {
 
         uInfo.setImagePath(dataSnapshot.child("Photo").getValue().toString());
 
-
-        Picasso.with(profilePage.this).load(uInfo.getImagePath()).into(imageView);
+        if (!uInfo.getImagePath().contains("http")) {
+            try {
+                Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.getImagePath());
+                imageView.setImageBitmap(imageBitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+            else{
+                Picasso.with(profilePage.this).load(uInfo.getImagePath()).into(imageView);
+            }
         mfull_name.setText("Full Name: " + uInfo.getFname() + " " + uInfo.getLname());
         mdisplayed_name.setText("User Name: " +uInfo.getUname());
         memail_field.setText("Email: " +user.getEmail());
         maddress.setText("Address: " +uInfo.getStreet() + ", " + uInfo.getCity());
 
 
+    }
+    public static Bitmap decodeFromFirebaseBase64(String image) throws IOException {
+        byte[] decodedByteArray = android.util.Base64.decode(image, Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(decodedByteArray, 0, decodedByteArray.length);
     }
 }
 

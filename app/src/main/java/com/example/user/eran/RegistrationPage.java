@@ -1,13 +1,9 @@
 package com.example.user.eran;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -16,7 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +27,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -42,7 +37,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 
 public class RegistrationPage extends AppCompatActivity {
@@ -55,6 +49,7 @@ public class RegistrationPage extends AppCompatActivity {
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     //private ImageView ivImage;
     private String userChoosenTask;
+    private String imageEncoded;
     //
 
     //
@@ -129,7 +124,15 @@ public class RegistrationPage extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                if(imageEncoded==null)
                                 uploadFile();
+                                else{
+                                    new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded).save();
+                                    //toastMessage("added user " + email);
+                                    Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+                                    startActivityForResult(myIntent, 0);
+                                    finish();
+                                }
                             } else {
                                 toastMessage("invalid email");
                             }
@@ -212,28 +215,42 @@ public class RegistrationPage extends AppCompatActivity {
     }
 
     private void onCaptureImageResult(Intent data) {
-        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+//        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+//
+//
+//        File destination = new File(Environment.getExternalStorageDirectory(),
+//                System.currentTimeMillis() + ".jpg");
+//
+//        FileOutputStream fo;
+//        try {
+//            destination.createNewFile();
+//            fo = new FileOutputStream(destination);
+//            fo.write(bytes.toByteArray());
+//            fo.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        //profilePictureView.setImageBitmap(thumbnail);
 
-
-        File destination = new File(Environment.getExternalStorageDirectory(),
-                System.currentTimeMillis() + ".jpg");
-
-        FileOutputStream fo;
-        try {
-            destination.createNewFile();
-            fo = new FileOutputStream(destination);
-            fo.write(bytes.toByteArray());
-            fo.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        profilePictureView.setImageBitmap(thumbnail);
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            profilePictureView.setImageBitmap(imageBitmap);
+            encodeBitmapAndSaveToFirebase(imageBitmap);
+        
+       
     }
+
+    private void encodeBitmapAndSaveToFirebase(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        imageEncoded = Base64.encodeToString(baos.toByteArray(), Base64.DEFAULT);
+
+
+        }
 
     @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
@@ -394,7 +411,11 @@ public class RegistrationPage extends AppCompatActivity {
         }
         //if there is not any file
         else {
-            //you can display an error toast
+            new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/eran-8c9cf.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=1d1f6e41-5023-40e0-9e5a-60baacefa802").save();
+            //toastMessage("added user " + email);
+            Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+            startActivityForResult(myIntent, 0);
+            finish();
         }
     }
 
