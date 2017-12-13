@@ -67,7 +67,7 @@
         android:layout_marginRight="48dp"
         android:layout_marginTop="17dp"
         android:background="@android:color/holo_blue_dark"
-        android:text="Go To Register"
+        android:text="Register"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
 
