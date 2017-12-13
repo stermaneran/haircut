@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -34,27 +33,14 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 
 public class RegistrationPage extends AppCompatActivity {
 
-    public static final int IMAGE_GALLERY_REQUEST = 20;
-
-
-    //
-    //picture taking
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
-    //private ImageView ivImage;
     private String userChoosenTask;
     private String imageEncoded;
-    //
-
-    //
-    //uploading file to firebase stoage
     private StorageReference mStorageRef;
     private Uri filePath;
     private  String fname ;
@@ -65,8 +51,6 @@ public class RegistrationPage extends AppCompatActivity {
     private  String pass2 ;
     private  String street;
     private  String city ;
-    //
-
 
     private FirebaseAuth mAuth;
     Button submitBtn;
@@ -146,47 +130,30 @@ public class RegistrationPage extends AppCompatActivity {
         });
     }
 
+    public void onProfileImageViewClick(View v) {
+            final CharSequence[] items = { "Take Photo", "Choose from Library", "Cancel" };
+            AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationPage.this);
+		    builder.setTitle("Add Photo!");
+		    builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+                public void onClick(DialogInterface dialog, int item) {
+                    boolean result=Utils.checkPermission(RegistrationPage.this);
 
-     public void onProfileImageViewClick(View v) {
-//        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-//        File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-//        String pictureDirectoryPath = pictureDirectory.getPath();
-//
-//        Uri data = Uri.parse(pictureDirectoryPath);
-//
-//        photoPickerIntent.setDataAndType(data, "image/*");
-//
-//        startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
-     //}
-
-   //
-   final CharSequence[] items = { "Take Photo", "Choose from Library",
-            "Cancel" };
-
-    AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationPage.this);
-		builder.setTitle("Add Photo!");
-		builder.setItems(items, new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int item) {
-            boolean result=Utils.checkPermission(RegistrationPage.this);
-
-            if (items[item].equals("Take Photo")) {
-                userChoosenTask ="Take Photo";
-                if(result)
-                    cameraIntent();
-
-            } else if (items[item].equals("Choose from Library")) {
-                userChoosenTask ="Choose from Library";
-                if(result)
-                    galleryIntent();
-
-            } else if (items[item].equals("Cancel")) {
-                dialog.dismiss();
-            }
-        }
-    });
-		builder.show();
-}
+                    if (items[item].equals("Take Photo")) {
+                        userChoosenTask ="Take Photo";
+                        if(result)
+                            cameraIntent();
+                    } else if (items[item].equals("Choose from Library")) {
+                        userChoosenTask ="Choose from Library";
+                        if(result)
+                            galleryIntent();
+                    } else if (items[item].equals("Cancel")) {
+                            dialog.dismiss();
+                    }
+                 }
+            });
+		    builder.show();
+    }
 
     private void galleryIntent()
     {
@@ -216,42 +183,17 @@ public class RegistrationPage extends AppCompatActivity {
     }
 
     private void onCaptureImageResult(Intent data) {
-//        Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-//        thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
-//
-//
-//        File destination = new File(Environment.getExternalStorageDirectory(),
-//                System.currentTimeMillis() + ".jpg");
-//
-//        FileOutputStream fo;
-//        try {
-//            destination.createNewFile();
-//            fo = new FileOutputStream(destination);
-//            fo.write(bytes.toByteArray());
-//            fo.close();
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        //profilePictureView.setImageBitmap(thumbnail);
-
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             profilePictureView.setImageBitmap(imageBitmap);
             Toast.makeText(getApplicationContext(), "Camera picture Uploaded ", Toast.LENGTH_LONG).show();
             encodeBitmapAndSaveToFirebase(imageBitmap);
-        
-       
     }
 
     private void encodeBitmapAndSaveToFirebase(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
         imageEncoded = Base64.encodeToString(baos.toByteArray(), Base64.DEFAULT);
-
-
         }
 
     @SuppressWarnings("deprecation")
@@ -265,7 +207,6 @@ public class RegistrationPage extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-
             profilePictureView.setImageBitmap(bm);
         } else {
             toastMessage("invalid photo");
@@ -351,11 +292,9 @@ public class RegistrationPage extends AppCompatActivity {
         return alldone;
     }
 
-
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
 
     private void uploadFile() {
         //if there is a file to upload
