@@ -411,7 +411,11 @@ public class RegistrationPage extends AppCompatActivity {
         }
         //if there is not any file
         else {
-            //you can display an error toast
+            new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/eran-8c9cf.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=1d1f6e41-5023-40e0-9e5a-60baacefa802").save();
+            //toastMessage("added user " + email);
+            Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+            startActivityForResult(myIntent, 0);
+            finish();
         }
     }
 
