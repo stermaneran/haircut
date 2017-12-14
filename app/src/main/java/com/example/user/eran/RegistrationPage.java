@@ -360,7 +360,7 @@ public class RegistrationPage extends AppCompatActivity {
         }
         //if there is not any file
         else {
-            new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/eran-8c9cf.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=1d1f6e41-5023-40e0-9e5a-60baacefa802").save();
+            new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8").save();
             Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
             startActivityForResult(myIntent, 0);
             finish();
