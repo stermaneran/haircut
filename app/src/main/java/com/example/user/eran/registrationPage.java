@@ -37,7 +37,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 
-public class RegistrationPage extends AppCompatActivity {
+public class registrationPage extends AppCompatActivity {
 
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private String userChoosenTask;
@@ -113,9 +113,9 @@ public class RegistrationPage extends AppCompatActivity {
                                 if(imageEncoded==null)
                                 uploadFile();
                                 else{
-                                    new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded).save();
+                                    new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded).save();
                                     //toastMessage("added user " + email);
-                                    Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+                                    Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
                                 }
@@ -133,12 +133,12 @@ public class RegistrationPage extends AppCompatActivity {
 
     public void onProfileImageViewClick(View v) {
             final CharSequence[] items = { "Take Photo", "Choose from Library", "Cancel" };
-            AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationPage.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(registrationPage.this);
 		    builder.setTitle("Add Photo!");
 		    builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
                 public void onClick(DialogInterface dialog, int item) {
-                    boolean result=Utils.checkPermission(RegistrationPage.this);
+                    boolean result=Utils.checkPermission(registrationPage.this);
 
                     if (items[item].equals("Take Photo")) {
                         userChoosenTask ="Take Photo";
@@ -323,9 +323,9 @@ public class RegistrationPage extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     @SuppressWarnings("VisibleForTests")
                                     Uri  pic = taskSnapshot.getMetadata().getDownloadUrl();
-                                    new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString()).save();
+                                    new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString()).save();
                                     //toastMessage("added user " + email);
-                                    Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+                                    Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
                                 }
@@ -360,8 +360,8 @@ public class RegistrationPage extends AppCompatActivity {
         }
         //if there is not any file
         else {
-            new eranCustomer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8").save();
-            Intent myIntent = new Intent(RegistrationPage.this, eranLogIn.class);
+            new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8").save();
+            Intent myIntent = new Intent(registrationPage.this, logIn.class);
             startActivityForResult(myIntent, 0);
             finish();
         }

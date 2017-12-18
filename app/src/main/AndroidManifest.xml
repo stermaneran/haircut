@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,15 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".eranLogIn">
+        <activity android:name=".logIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".eranBasePage" />
-        <!--<activity android:name=".eranSingUp" />-->
+        <activity android:name=".basePage" />
+        <!-- <activity android:name=".eranSingUp" /> -->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,17 +38,21 @@
             android:value="AIzaSyBvhmRSODy404JlT0fMc4m9gracCpqeLfQ" />
 
         <activity
-            android:name=".eranMapsActivity"
+            android:name=".mapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".eranreadme" />
-        <!--<activity-->
-            <!--android:name=".LoginActivity"-->
-            <!--android:label="@string/title_activity_login"-->
-            <!--android:theme="@style/AppTheme.NoActionBar" />-->
-        <activity android:name=".RegistrationPage" />
+        <activity android:name=".readme" />
+        <!-- <activity -->
+        <!-- android:name=".LoginActivity" -->
+        <!-- android:label="@string/title_activity_login" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
+        <activity android:name=".registrationPage" />
         <activity
             android:name=".profilePage"
             android:label="@string/title_activity_prifile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".usersPage"
+            android:label="@string/title_activity_users_page"
             android:theme="@style/AppTheme"></activity>
     </application>
 
