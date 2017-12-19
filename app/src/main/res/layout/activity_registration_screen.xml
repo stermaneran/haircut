@@ -166,4 +166,16 @@
         android:layout_toStartOf="@+id/unBox"
         app:srcCompat="@color/colorPrimaryDark" />
 
+    <ToggleButton
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confPassBox"
+        android:layout_alignLeft="@+id/addrTitle"
+        android:layout_alignStart="@+id/addrTitle"
+        android:text="ToggleButton"
+        android:textOff="Male"
+        android:textOn="Female"
+        tools:text="male" />
+
 </RelativeLayout>

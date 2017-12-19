@@ -9,4 +9,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_prifile">prifile</string>
     <string name="title_activity_users_page">usersPage</string>
+    <string name="title_activity_add_app">addApp</string>
 </resources>

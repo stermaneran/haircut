@@ -53,6 +53,10 @@
         <activity
             android:name=".usersPage"
             android:label="@string/title_activity_users_page"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".addApp"
+            android:label="@string/title_activity_add_app"
             android:theme="@style/AppTheme"></activity>
     </application>
 

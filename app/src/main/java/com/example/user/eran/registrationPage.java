@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -57,6 +58,7 @@ public class registrationPage extends AppCompatActivity {
     Button submitBtn;
     ImageButton uploadImageBtn;
     EditText unBox, passBox, cityBox, emailBox, streetBox, fnBox, lnBox, confPassBox;
+    ToggleButton genderTgl;
     TextView profilePicTitle, registTitle, addrTitle;
     ImageView profilePictureView;
 
@@ -78,6 +80,7 @@ public class registrationPage extends AppCompatActivity {
         profilePicTitle = (TextView) findViewById(R.id.profilePicTitle);
         registTitle = (TextView) findViewById(R.id.registTitle);
         addrTitle = (TextView) findViewById(R.id.addrTitle);
+        genderTgl = (ToggleButton) findViewById(R.id.gender);
         profilePictureView = (ImageView) findViewById(R.id.profilePictureView);
 
 
@@ -113,7 +116,8 @@ public class registrationPage extends AppCompatActivity {
                                 if(imageEncoded==null)
                                 uploadFile();
                                 else{
-                                    new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded).save();
+                                    String g =genderTgl.getText().toString();
+                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded,g).save();
                                     //toastMessage("added user " + email);
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
@@ -323,7 +327,8 @@ public class registrationPage extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     @SuppressWarnings("VisibleForTests")
                                     Uri  pic = taskSnapshot.getMetadata().getDownloadUrl();
-                                    new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString()).save();
+                                    String g =genderTgl.getText().toString();
+                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString(),g).save();
                                     //toastMessage("added user " + email);
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
@@ -360,7 +365,8 @@ public class registrationPage extends AppCompatActivity {
         }
         //if there is not any file
         else {
-            new customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8").save();
+            String g =genderTgl.getText().toString();
+            new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8",g).save();
             Intent myIntent = new Intent(registrationPage.this, logIn.class);
             startActivityForResult(myIntent, 0);
             finish();

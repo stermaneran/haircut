@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.eran.addApp">
+
+        <TextView
+            android:id="@+id/registTitle"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Appointment"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/unBox"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="158dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Price"
+            android:inputType="textPersonName"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/fnBox"
+            android:layout_alignStart="@+id/lnBox" />
+
+    <EditText
+        android:id="@+id/fnBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="106dp" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/unBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="83dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+
+        <EditText
+            android:id="@+id/lnBox"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Time"
+            android:inputType="textPersonName"
+            android:layout_below="@+id/fnBox"
+            android:layout_alignStart="@+id/fnBox" />
+
+
+    </RelativeLayout>
