@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
-public class eranreadme extends AppCompatActivity {
+public class readme extends AppCompatActivity {
 
     private TextView box;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eran_activity_readme);
+        setContentView(R.layout.activity_readme);
 
         box =(TextView)findViewById(R.id.textView);
 

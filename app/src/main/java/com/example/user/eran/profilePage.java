@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -85,7 +84,7 @@ public class profilePage extends AppCompatActivity {
     }
 
     private void showData(DataSnapshot dataSnapshot) {
-        eranCustomer uInfo = new eranCustomer();
+        customer uInfo = new customer();
         dataSnapshot = dataSnapshot.child("customer").child(userID);
 
        // uInfo.set

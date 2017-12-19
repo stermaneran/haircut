@@ -15,7 +15,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class eranLogIn extends AppCompatActivity {
+public class logIn extends AppCompatActivity {
 
     private TextInputLayout emailField;
     private TextInputLayout passwordField;
@@ -31,7 +31,7 @@ public class eranLogIn extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.eran_log_in);
+        setContentView(R.layout.log_in);
         emailField = (TextInputLayout) findViewById(R.id.email_field);
         passwordField = (TextInputLayout) findViewById(R.id.password_field);
         btnLogin = findViewById(R.id.login);
@@ -47,7 +47,7 @@ public class eranLogIn extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Intent intent = new Intent(eranLogIn.this, eranBasePage.class);
+                    Intent intent = new Intent(logIn.this, basePage.class);
                     startActivity(intent);
                     finish();
 
@@ -63,9 +63,9 @@ public class eranLogIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                Intent intent = new Intent(eranLogIn.this, RegistrationPage.class);
+                Intent intent = new Intent(logIn.this, registrationPage.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
@@ -73,9 +73,9 @@ public class eranLogIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!Utils.hasText(emailField)) {
-                    Utils.showToast(eranLogIn.this, "Please input your email");
+                    Utils.showToast(logIn.this, "Please input your email");
                 } else if (!Utils.hasText(passwordField)) {
-                    Utils.showToast(eranLogIn.this, "Please input your password");
+                    Utils.showToast(logIn.this, "Please input your password");
                 } else {
                     //requesting Firebase server
                     showProcessDialog();
@@ -87,16 +87,16 @@ public class eranLogIn extends AppCompatActivity {
 
     private void authenticateUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(eranLogIn.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(logIn.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         // When login failed
                         if (!task.isSuccessful()) {
-                            Utils.showToast(eranLogIn.this, "Login error!");
+                            Utils.showToast(logIn.this, "Login error!");
                             progressDialog.dismiss();
                         } else {
                             //When login successful, redirect user to main activity
-                            Intent intent = new Intent(eranLogIn.this, eranBasePage.class);
+                            Intent intent = new Intent(logIn.this, basePage.class);
                             startActivity(intent);
                             progressDialog.dismiss();
                             finish();

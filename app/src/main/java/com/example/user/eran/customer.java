@@ -8,18 +8,18 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 
 
-    public class eranCustomer {
+    public class customer {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference ref = database.getReference("customer");
 
-   private String FirstName, LastName, UserName, Email, Password, Street, City, id, imagePath;
+   private String FirstName, LastName, UserName, Email, Password, Street, City, id, imagePath,Type;
 
-    public eranCustomer(){
+    public customer(){
         //for fire base
     }
 
-    public eranCustomer(String fname, String lname, String uname, String email,
-                        String password, String street,String city, String id,String path) {
+    public customer(String fname, String lname, String uname, String email,
+                    String password, String street, String city, String id, String path) {
 
         this.FirstName=fname;
         this.LastName=lname;
@@ -30,7 +30,16 @@ import com.google.firebase.database.FirebaseDatabase;
         this.City=city;
         this.id=id;
         this.imagePath=path;
+        this.Type="Non-Admin";
 
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String type) {
+        Type = type;
     }
 
     public String getImagePath(){return imagePath; }
@@ -121,6 +130,8 @@ import com.google.firebase.database.FirebaseDatabase;
         c.setValue(Street);
         c=usersRef.child("Photo");
         c.setValue(imagePath);
+        c=usersRef.child("Type");
+        c.setValue(Type);
     }
 }
 

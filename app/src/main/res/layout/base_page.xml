@@ -81,6 +81,21 @@
                 android:textAlignment="textStart" />
 
             <Button
+                android:id="@+id/usersb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/button4"
+                android:layout_toRightOf="@+id/button4"
+                android:background="@android:color/holo_blue_dark"
+                android:text="  USERS"
+                android:textAlignment="textStart"
+                android:visibility="gone" />
+
+            <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
