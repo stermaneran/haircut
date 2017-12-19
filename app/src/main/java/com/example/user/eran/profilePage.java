@@ -36,6 +36,8 @@ public class profilePage extends AppCompatActivity {
     private TextView memail_field;
     private TextView maddress;
     private TextView gender;
+    private TextView mapp;
+
 
     //private View bedit_info;
 
@@ -51,7 +53,7 @@ public class profilePage extends AppCompatActivity {
         memail_field = (TextView) findViewById(R.id.email_field);
         maddress = (TextView) findViewById(R.id.address);
         gender = (TextView) findViewById(R.id.gender);
-
+        mapp = (TextView) findViewById(R.id.app);
 
         //bedit_info = findViewById(R.id.edit_info);
 
@@ -74,6 +76,7 @@ public class profilePage extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 showData(dataSnapshot);
+                showApp(dataSnapshot);
             }
 
             @Override
@@ -118,6 +121,21 @@ public class profilePage extends AppCompatActivity {
 
 
     }
+
+
+    private void showApp(DataSnapshot dataSnapshot) {
+        Appointment uInfo = new Appointment();
+        dataSnapshot = dataSnapshot.child("Appointments").child(userID);
+
+        // uInfo.set
+        uInfo.set_date(dataSnapshot.child("Date").getValue().toString());
+        uInfo.set_time(dataSnapshot.child("Time").getValue().toString());
+
+        mapp.setText("Appointment: " +uInfo.get_date() + " at " + uInfo.get_time());
+
+    }
+
+
     public static Bitmap decodeFromFirebaseBase64(String image) throws IOException {
         byte[] decodedByteArray = android.util.Base64.decode(image, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedByteArray, 0, decodedByteArray.length);

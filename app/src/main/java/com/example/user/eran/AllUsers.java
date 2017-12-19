@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class usersPage extends AppCompatActivity {
+public class AllUsers extends AppCompatActivity {
 
     private ListView users;
     private ListAdapter myListAdapter;

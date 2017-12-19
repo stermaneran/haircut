@@ -51,13 +51,14 @@
             android:label="@string/title_activity_prifile"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".usersPage"
+            android:name=".AllUsers"
             android:label="@string/title_activity_users_page"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".addApp"
             android:label="@string/title_activity_add_app"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".AllApp"></activity>
     </application>
 
 </manifest>
