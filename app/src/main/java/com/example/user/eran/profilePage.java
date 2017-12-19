@@ -87,7 +87,7 @@ public class profilePage extends AppCompatActivity {
 
     private void showData(DataSnapshot dataSnapshot) {
         Customer uInfo = new Customer();
-        dataSnapshot = dataSnapshot.child("Customer").child(userID);
+        dataSnapshot = dataSnapshot.child("Users").child(userID);
 
        // uInfo.set
         uInfo.setFname(dataSnapshot.child("FirstName").getValue().toString());

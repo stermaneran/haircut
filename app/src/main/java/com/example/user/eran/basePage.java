@@ -134,7 +134,7 @@ public class basePage extends AppCompatActivity {
     }
 
     private boolean isAdmin(DataSnapshot dataSnapshot) {
-        dataSnapshot = dataSnapshot.child("Customer").child(userID);
+        dataSnapshot = dataSnapshot.child("Users").child(userID);
         if(dataSnapshot.child("Type").getValue().toString().equals("Admin")){
             return true;
         }

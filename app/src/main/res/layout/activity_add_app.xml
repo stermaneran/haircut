@@ -19,55 +19,71 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/unBox"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="158dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Price"
-            android:inputType="textPersonName"
-            android:layout_marginTop="42dp"
-            android:layout_below="@+id/fnBox"
-            android:layout_alignStart="@+id/lnBox" />
-
-    <EditText
-        android:id="@+id/fnBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/registTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:ems="10"
-        android:hint="Date"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="106dp" />
-
     <Button
         android:id="@+id/submitBtn"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/unBox"
+        android:layout_below="@+id/pickTimeBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="55dp"
         android:text="Submit"
         tools:layout_editor_absoluteX="153dp"
         tools:layout_editor_absoluteY="445dp" />
 
 
-        <EditText
-            android:id="@+id/lnBox"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="52dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Time"
-            android:inputType="textPersonName"
-            android:layout_below="@+id/fnBox"
-            android:layout_alignStart="@+id/fnBox" />
+    <Button
+        android:id="@+id/pickDateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registTitle"
+        android:layout_marginTop="58dp"
+        android:layout_toLeftOf="@+id/dateTitle"
+        android:layout_toStartOf="@+id/dateTitle"
+        android:text="pick date" />
+
+    <Button
+        android:id="@+id/pickTimeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/timeTitle"
+        android:layout_alignEnd="@+id/pickDateBtn"
+        android:layout_alignRight="@+id/pickDateBtn"
+        android:text="pick time" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pickDateBtn"
+        android:layout_alignBottom="@+id/pickDateBtn"
+        android:layout_alignLeft="@+id/submitBtn"
+        android:layout_alignStart="@+id/submitBtn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="dd/MM/yy" />
+
+    <TextView
+        android:id="@+id/timeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickDateBtn"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="62dp"
+        android:layout_toEndOf="@+id/pickTimeBtn"
+        android:layout_toRightOf="@+id/pickTimeBtn"
+        android:text="HH:mm" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pickTimeBtn"
+        android:layout_alignStart="@+id/pickTimeBtn"
+        android:layout_below="@+id/timeTitle"
+        android:layout_marginTop="57dp"
+        android:text="pick haircut"
+        android:visibility="invisible" />
 
 
-    </RelativeLayout>
+</RelativeLayout>
