@@ -28,8 +28,9 @@ public class usersPage extends AppCompatActivity {
     private final int CONTEXT_MENU_ADMIN = 1;
     private final int CONTEXT_MENU_NON_ADMIN = 2;
     private final int CONTEXT_MENU_CANCEL = 3;
-    //private ArrayList<String> uidl = new ArrayList<>();
-    private final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("customer");
+    private ArrayList<String> uidl = new ArrayList<>();
+    private final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
+    private String selectedUid;
 
     private static final String TAG = "usersDatabase";
 
@@ -60,15 +61,30 @@ public class usersPage extends AppCompatActivity {
         users.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //String selectedFromList =(users.getItemAtPosition(position).toString());
-
+                String selectedFromList =(users.getItemAtPosition(position).toString());
+                selectedUid= getUid(selectedFromList);
                 registerForContextMenu(users);
                 openContextMenu(users);
-
             }
 
         });
 
+    }
+
+    private String getUid(String selectedFromList) {
+        int start = selectedFromList.indexOf("\n") +1;
+        int end = selectedFromList.lastIndexOf("\n");
+        String mail=selectedFromList.substring(start,end);
+
+        for (String id:uidl)
+        {
+            if (id.contains(mail))
+            {
+                String ans= id.substring(0, id.indexOf("="));
+                return ans;
+            }
+        }
+        return "null";
     }
 
 
@@ -88,7 +104,9 @@ public class usersPage extends AppCompatActivity {
         switch (item.getItemId()) {
             case CONTEXT_MENU_ADMIN: {
                 try {
-                            ref.child("i4KSlj4mE9Mf51xxcc3HOM9bfmg1").child("Type").setValue("Admin");
+                        ref.child(selectedUid).child("Type").setValue("Admin");
+                        finish();
+                        startActivity(getIntent());
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -96,7 +114,9 @@ public class usersPage extends AppCompatActivity {
             break;
             case CONTEXT_MENU_NON_ADMIN: {
                 try {
-                    ref.child("i4KSlj4mE9Mf51xxcc3HOM9bfmg1").child("Type").setValue("Non-Admin");
+                    ref.child(selectedUid).child("Type").setValue("Non-Admin");
+                    finish();
+                    startActivity(getIntent());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -121,9 +141,9 @@ public class usersPage extends AppCompatActivity {
             //Get user map
             Map singleUser = (Map) entry.getValue();
 
-            String mail =  (String) singleUser.get("Email") + "\n" + (String) singleUser.get("Type");
-//            String uidnum = entry.toString();
-//            uidl.add(uidnum);
+            String mail =  (String) singleUser.get("LastName") + ", " + (String) singleUser.get("FirstName") +  "\n" + (String) singleUser.get("Email") + "\n" + (String) singleUser.get("Type");
+            String uidnum = entry.toString();
+            uidl.add(uidnum);
             usersEmail.add(mail);
 
         }

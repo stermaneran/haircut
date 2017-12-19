@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class basePage extends AppCompatActivity {
 
-    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnusers;
+    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
@@ -38,6 +38,7 @@ public class basePage extends AppCompatActivity {
         btnSignOut = (Button) findViewById(R.id.button4);
         btnProfile = (Button) findViewById(R.id.profle);
         btnREADME= (Button) findViewById(R.id.readme);
+        btnaddApp= (Button) findViewById(R.id.addApp);
         btnusers= (Button) findViewById(R.id.usersb);
 
 
@@ -90,6 +91,15 @@ public class basePage extends AppCompatActivity {
             }
         });
 
+        btnaddApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(basePage.this, addApp.class);
+                startActivityForResult(myIntent, 0);
+                //finish();
+            }
+        });
+
         btnProfile.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -124,7 +134,7 @@ public class basePage extends AppCompatActivity {
     }
 
     private boolean isAdmin(DataSnapshot dataSnapshot) {
-        dataSnapshot = dataSnapshot.child("customer").child(userID);
+        dataSnapshot = dataSnapshot.child("Customer").child(userID);
         if(dataSnapshot.child("Type").getValue().toString().equals("Admin")){
             return true;
         }

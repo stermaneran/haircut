@@ -35,6 +35,7 @@ public class profilePage extends AppCompatActivity {
     private TextView mdisplayed_name;
     private TextView memail_field;
     private TextView maddress;
+    private TextView gender;
 
     //private View bedit_info;
 
@@ -49,6 +50,7 @@ public class profilePage extends AppCompatActivity {
         mdisplayed_name = (TextView) findViewById(R.id.displayed_name);
         memail_field = (TextView) findViewById(R.id.email_field);
         maddress = (TextView) findViewById(R.id.address);
+        gender = (TextView) findViewById(R.id.gender);
 
 
         //bedit_info = findViewById(R.id.edit_info);
@@ -84,11 +86,12 @@ public class profilePage extends AppCompatActivity {
     }
 
     private void showData(DataSnapshot dataSnapshot) {
-        customer uInfo = new customer();
-        dataSnapshot = dataSnapshot.child("customer").child(userID);
+        Customer uInfo = new Customer();
+        dataSnapshot = dataSnapshot.child("Customer").child(userID);
 
        // uInfo.set
         uInfo.setFname(dataSnapshot.child("FirstName").getValue().toString());
+        uInfo.setGender(dataSnapshot.child("Gender").getValue().toString());
         uInfo.setLname(dataSnapshot.child("LastName").getValue().toString());
         uInfo.setCity(dataSnapshot.child("City").getValue().toString());
         uInfo.setStreet(dataSnapshot.child("Street").getValue().toString());
@@ -107,6 +110,7 @@ public class profilePage extends AppCompatActivity {
             else{
                 Picasso.with(profilePage.this).load(uInfo.getImagePath()).into(imageView);
             }
+        gender.setText("Gender: " + uInfo.getGender());
         mfull_name.setText("Full Name: " + uInfo.getFname() + " " + uInfo.getLname());
         mdisplayed_name.setText("User Name: " +uInfo.getUname());
         memail_field.setText("Email: " +user.getEmail());
