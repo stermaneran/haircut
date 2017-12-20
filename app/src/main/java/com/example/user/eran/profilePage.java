@@ -135,7 +135,7 @@ public class profilePage extends AppCompatActivity {
             mapp.setText("Appointment: " + uInfo.get_date() + " at " + uInfo.get_time());
         }
         else{
-         mapp.setText("no Appointments set");
+         mapp.setText("No Appointments set");
         }
 
     }

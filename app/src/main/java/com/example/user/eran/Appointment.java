@@ -14,16 +14,19 @@ public class Appointment {
     String _price;
     String _date;
     String _time;
+    String _email;
     String _cust;
+
 
     public Appointment() {}
 
 
-    public Appointment(String date, String time, String cust,String price) {
+    public Appointment(String cust ,String date, String time, String email,String price) {
         _date = date;
         _time = time;
-        _cust = cust;
+        _email = email;
         _price = price;
+        _cust = cust;
     }
 
     public String get_price() {
@@ -51,19 +54,19 @@ public class Appointment {
     }
 
     public String get_cust() {
-        return _cust;
+        return _email;
     }
 
     public void set_cust(String _cust) {
-        this._cust = _cust;
+        this._email = _cust;
     }
 
     public void save()
     {
         DatabaseReference usersRef = ref.child(_cust);
         DatabaseReference c;
-        c=usersRef.child("ID");
-        c.setValue(_cust);
+        c=usersRef.child("Email");
+        c.setValue(_email);
         c=usersRef.child("Date");
         c.setValue(_date);
         c=usersRef.child("Time");
