@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class basePage extends AppCompatActivity {
 
-    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers;
+    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers,appsm;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
@@ -40,6 +40,8 @@ public class basePage extends AppCompatActivity {
         btnREADME= (Button) findViewById(R.id.readme);
         btnaddApp= (Button) findViewById(R.id.addApp);
         btnusers= (Button) findViewById(R.id.usersb);
+        appsm= (Button) findViewById(R.id.apps);
+
 
 
         mAuth=FirebaseAuth.getInstance();
@@ -60,6 +62,7 @@ public class basePage extends AppCompatActivity {
 
                 if(isAdmin(dataSnapshot)){
                     btnusers.setVisibility(View.VISIBLE);
+                    appsm.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -121,7 +124,16 @@ public class basePage extends AppCompatActivity {
         btnusers.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(basePage.this, usersPage.class);
+                Intent i = new Intent(basePage.this, AllUsers.class);
+                startActivityForResult(i, 0);
+                //finish();
+            }
+        });
+
+        appsm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(basePage.this, AllApp.class);
                 startActivityForResult(i, 0);
                 //finish();
             }
@@ -134,7 +146,7 @@ public class basePage extends AppCompatActivity {
     }
 
     private boolean isAdmin(DataSnapshot dataSnapshot) {
-        dataSnapshot = dataSnapshot.child("Customer").child(userID);
+        dataSnapshot = dataSnapshot.child("Users").child(userID);
         if(dataSnapshot.child("Type").getValue().toString().equals("Admin")){
             return true;
         }

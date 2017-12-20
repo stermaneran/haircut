@@ -75,8 +75,8 @@ public class registrationPage extends AppCompatActivity {
         streetBox = (EditText) findViewById(R.id.streetBox);
         confPassBox = (EditText) findViewById(R.id.confPassBox);
         unBox = (EditText) findViewById(R.id.unBox);
-        lnBox = (EditText) findViewById(R.id.lnBox);
-        fnBox = (EditText) findViewById(R.id.fnBox);
+        lnBox = (EditText) findViewById(R.id.timebox);
+        fnBox = (EditText) findViewById(R.id.datebox);
         profilePicTitle = (TextView) findViewById(R.id.profilePicTitle);
         registTitle = (TextView) findViewById(R.id.registTitle);
         addrTitle = (TextView) findViewById(R.id.addrTitle);

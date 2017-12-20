@@ -36,8 +36,8 @@
         android:hint="User Name"
         android:inputType="textPersonName"
         android:layout_marginTop="42dp"
-        android:layout_below="@+id/fnBox"
-        android:layout_alignStart="@+id/lnBox" />
+        android:layout_below="@+id/datebox"
+        android:layout_alignStart="@+id/timebox" />
 
     <EditText
         android:id="@+id/passBox"
@@ -77,7 +77,7 @@
         android:layout_alignStart="@+id/unBox" />
 
     <EditText
-        android:id="@+id/fnBox"
+        android:id="@+id/datebox"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="106dp"
         android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
 
 
     <EditText
-        android:id="@+id/lnBox"
+        android:id="@+id/timebox"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="52dp"
         android:layout_width="wrap_content"
@@ -123,8 +123,8 @@
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        android:layout_below="@+id/fnBox"
-        android:layout_alignStart="@+id/fnBox" />
+        android:layout_below="@+id/datebox"
+        android:layout_alignStart="@+id/datebox" />
 
     <EditText
         android:id="@+id/confPassBox"
@@ -154,7 +154,7 @@
         app:srcCompat="@color/colorPrimaryDark"
         android:layout_toLeftOf="@+id/unBox"
         android:layout_toStartOf="@+id/unBox"
-        android:layout_alignTop="@+id/fnBox" />
+        android:layout_alignTop="@+id/datebox" />
 
     <ImageView
         android:id="@+id/profilePictureView"
@@ -162,7 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/uploadImageBtn"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/fnBox"
+        android:layout_alignTop="@+id/datebox"
         android:layout_toStartOf="@+id/unBox"
         app:srcCompat="@color/colorPrimaryDark" />
 
