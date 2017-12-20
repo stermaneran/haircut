@@ -96,9 +96,18 @@ public class addApp extends AppCompatActivity {
                         new TimePickerDialog.OnTimeSetListener() {
 
                             @Override
-                            public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                                timestr = mHour + ":" + mMinutes;
-                                timeTitle.setText(mHour + ":" + mMinutes);
+                            public void onTimeSet(TimePicker timePicker, int i, int i1){
+                                String myHour= Integer.toString(i);
+                                String myminute=Integer.toString(i1);
+                                if(i<10){
+                                    myHour= "0"+myHour;
+                                }
+                                if(i1<10)
+                                {
+                                    myminute="0"+myminute;
+                                }
+                                timestr = myHour + ":" + myminute;
+                                timeTitle.setText(myHour + ":" + myminute);
                             }
                         }, mHour,mMinutes,true);
                 timePicker.show();
@@ -113,6 +122,7 @@ public class addApp extends AppCompatActivity {
                     Appointment app = new Appointment(datestr, timestr, mAuth.getCurrentUser().getUid().toString(), "100");
                     app.save();
                     toastMessage("Appointment submitted");
+                    finish();
                 }
             }
         });
