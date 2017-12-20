@@ -2,6 +2,7 @@ package com.example.user.eran;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -15,8 +16,11 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -107,7 +111,7 @@ public class addApp extends AppCompatActivity {
                                     myminute="0"+myminute;
                                 }
                                 timestr = myHour + ":" + myminute;
-                                timeTitle.setText(myHour + ":" + myminute);
+                                timeTitle.setText(timestr);
                             }
                         }, mHour,mMinutes,true);
                 timePicker.show();
@@ -118,11 +122,13 @@ public class addApp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(validateForm()) {
+             if(validateForm()) {
                     Appointment app = new Appointment(mAuth.getCurrentUser().getUid(),datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
                     app.save();
                     toastMessage("Appointment submitted");
-                    finish();
+//                 Intent myIntent = new Intent(addApp.this, basePage.class);
+//                 startActivityForResult(myIntent, 0);
+                 finish();
                 }
             }
         });

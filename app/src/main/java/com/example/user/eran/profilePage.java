@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +38,8 @@ public class profilePage extends AppCompatActivity {
     private TextView maddress;
     private TextView gender;
     private TextView mapp;
+
+    private ValueEventListener listener;
 
 
     //private View bedit_info;
@@ -72,7 +75,7 @@ public class profilePage extends AppCompatActivity {
         userID = user.getUid();
 
         // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
+        listener =myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 showData(dataSnapshot);
@@ -118,8 +121,6 @@ public class profilePage extends AppCompatActivity {
         mdisplayed_name.setText("User Name: " +uInfo.getUname());
         memail_field.setText("Email: " +user.getEmail());
         maddress.setText("Address: " +uInfo.getStreet() + ", " + uInfo.getCity());
-
-
     }
 
 
@@ -144,6 +145,17 @@ public class profilePage extends AppCompatActivity {
     public static Bitmap decodeFromFirebaseBase64(String image) throws IOException {
         byte[] decodedByteArray = android.util.Base64.decode(image, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedByteArray, 0, decodedByteArray.length);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if ((keyCode == KeyEvent.KEYCODE_BACK))
+        {
+            myRef.removeEventListener(listener);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
 
