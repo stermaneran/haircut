@@ -128,10 +128,15 @@ public class profilePage extends AppCompatActivity {
         dataSnapshot = dataSnapshot.child("Appointments").child(userID);
 
         // uInfo.set
-        uInfo.set_date(dataSnapshot.child("Date").getValue().toString());
-        uInfo.set_time(dataSnapshot.child("Time").getValue().toString());
+        if(dataSnapshot.getValue()!=null) {
+            uInfo.set_date(dataSnapshot.child("Date").getValue().toString());
+            uInfo.set_time(dataSnapshot.child("Time").getValue().toString());
 
-        mapp.setText("Appointment: " +uInfo.get_date() + " at " + uInfo.get_time());
+            mapp.setText("Appointment: " + uInfo.get_date() + " at " + uInfo.get_time());
+        }
+        else{
+         mapp.setText("no Appointments set");
+        }
 
     }
 
