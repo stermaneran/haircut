@@ -366,7 +366,7 @@ public class registrationPage extends AppCompatActivity {
         //if there is not any file
         else {
             String g =genderTgl.getText().toString();
-            new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2FDefault.jpg?alt=media&token=2cecd3f4-488f-4ffe-a20f-30f55cd861e8",g).save();
+            new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4",g).save();
             Intent myIntent = new Intent(registrationPage.this, logIn.class);
             startActivityForResult(myIntent, 0);
             finish();

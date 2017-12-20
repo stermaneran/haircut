@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,7 +28,11 @@ public class AllApp extends AppCompatActivity {
     private ListAdapter myListAdapter;
     private final int CONTEXT_MENU_DELETE = 1;
     private final int CONTEXT_MENU_CANCEL = 2;
+    private ArrayList<String> uidl = new ArrayList<>();
     private final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Appointments");
+    TextView mnoapps;
+
+
     private String selectedUid;
 
     private static final String TAG = "AppointmentsDatabase";
@@ -38,14 +43,24 @@ public class AllApp extends AppCompatActivity {
         setContentView(R.layout.activity_all_app);
         users = (ListView) findViewById(R.id.listv);
 
+        mnoapps = (TextView) findViewById(R.id.noapps);
 
         ref.addListenerForSingleValueEvent(
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         //Get map of users in datasnapshot
-                        collectEmails((Map<String,Object>) dataSnapshot.getValue());
-                        users.setAdapter(myListAdapter);
+
+                        Map<String,Object> usersMap= (Map<String, Object>) dataSnapshot.getValue();
+
+                        if(usersMap!=null) {
+                            mnoapps.setVisibility(View.GONE);
+                            collectEmails(usersMap);
+                            users.setAdapter(myListAdapter);
+                        }
+                        else{
+                            mnoapps.setVisibility(View.VISIBLE);
+                        }
 
                     }
 
@@ -59,6 +74,8 @@ public class AllApp extends AppCompatActivity {
         users.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedFromList =(users.getItemAtPosition(position).toString());
+                selectedUid= getUid(selectedFromList);
                 registerForContextMenu(users);
                 openContextMenu(users);
             }
@@ -67,6 +84,20 @@ public class AllApp extends AppCompatActivity {
 
     }
 
+    private String getUid(String selectedFromList) {
+        int start = selectedFromList.indexOf("\n") +1;
+        String mail=selectedFromList.substring(start);
+
+        for (String id:uidl)
+        {
+            if (id.contains(mail))
+            {
+                String ans= id.substring(0, id.indexOf("="));
+                return ans;
+            }
+        }
+        return "null";
+    }
 
 
     @Override
@@ -84,7 +115,7 @@ public class AllApp extends AppCompatActivity {
         switch (item.getItemId()) {
             case CONTEXT_MENU_DELETE: {
                 try {
-                    //ref.child(selectedUid).child("Type").setValue("Admin");
+                    ref.child(selectedUid).removeValue();;
                     finish();
                     startActivity(getIntent());
                 } catch (Exception e) {
@@ -112,8 +143,10 @@ public class AllApp extends AppCompatActivity {
             //Get user map
             Map singleUser = (Map) entry.getValue();
 
-            String app =  (String) singleUser.get("Date") + "  " + (String) singleUser.get("Time");
+            String app =  (String) singleUser.get("Date") + "  " + (String) singleUser.get("Time") + "\n" +(String) singleUser.get("Email");
             usersApp.add(app);
+            String uidnum = entry.toString();
+            uidl.add(uidnum);
 
         }
 
