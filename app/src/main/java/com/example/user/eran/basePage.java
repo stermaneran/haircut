@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class basePage extends AppCompatActivity {
 
-    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers,appsm;
+    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers,appsm,priceListBtn;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
@@ -35,13 +35,13 @@ public class basePage extends AppCompatActivity {
 
 
         btnMap = (Button) findViewById(R.id.Map);
-        btnSignOut = (Button) findViewById(R.id.button4);
+        btnSignOut = (Button) findViewById(R.id.btnSignOut);
         btnProfile = (Button) findViewById(R.id.profle);
         btnREADME= (Button) findViewById(R.id.readme);
         btnaddApp= (Button) findViewById(R.id.addApp);
         btnusers= (Button) findViewById(R.id.usersb);
         appsm= (Button) findViewById(R.id.apps);
-
+        priceListBtn = (Button) findViewById(R.id.btnPriceList);
 
 
         mAuth=FirebaseAuth.getInstance();
@@ -139,7 +139,19 @@ public class basePage extends AppCompatActivity {
             }
         });
 
+        priceListBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(basePage.this, PricelistPage.class);
+                startActivityForResult(i, 0);
+                //finish();
+            }
+        });
+
     }
+
+
+
 
     private void toastMessage(String message){
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
