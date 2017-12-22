@@ -10,18 +10,20 @@
         android:layout_width="379dp"
         android:layout_height="132dp"
         android:layout_margin="4dp"
+        android:layout_marginBottom="8dp"
         android:elevation="8dp"
         app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="1dp">
 
         <RelativeLayout
 
             android:layout_width="378dp"
-            android:layout_height="130dp"
+            android:layout_height="152dp"
             android:elevation="13dp">
 
             <TextView
-                android:id="@+id/haircutName"
+                android:id="@+id/addDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/customer"
@@ -30,18 +32,41 @@
                 android:layout_marginBottom="11dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginStart="12dp"
-                android:text="NAME"
+                android:text="Date: "
+                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+            <TextView
+                android:id="@+id/appTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/addDate"
+                android:layout_alignBottom="@+id/addDate"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="102dp"
+                android:layout_marginRight="102dp"
+                android:text="Time: "
                 android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
             <TextView
                 android:id="@+id/customer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/haircutName"
-                android:layout_alignStart="@+id/haircutName"
+                android:layout_alignLeft="@+id/addDate"
+                android:layout_alignStart="@+id/addDate"
                 android:layout_centerVertical="true"
-                android:text="price: "
-                android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
+                android:text="Customer: "
+                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+            <TextView
+                android:id="@+id/haircutStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/haircutStyle"
+                android:layout_alignLeft="@+id/appTime"
+                android:layout_alignStart="@+id/appTime"
+                android:text="Planned duration: "
+                android:textAppearance="@android:style/TextAppearance.Material.Small" />
 
             <TextView
                 android:id="@+id/haircutStyle"
@@ -50,9 +75,9 @@
                 android:layout_alignLeft="@+id/customer"
                 android:layout_alignStart="@+id/customer"
                 android:layout_below="@+id/customer"
-                android:layout_marginTop="11dp"
-                android:text="Appointment duration required: "
-                android:textAppearance="@android:style/TextAppearance.Material.Subhead" />
+                android:layout_marginTop="12dp"
+                android:text="Haircut: "
+                android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

@@ -1,9 +1,7 @@
 package com.example.user.eran;
 
 import android.content.Context;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +31,7 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
         return new PriceListViewHolder(v);
     }
 
+
     @Override
     public void onBindViewHolder(final PriceListViewHolder holder, int position) {
         final Haircut haircutItem = _haircutsList.get(position);
@@ -54,12 +53,11 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
 
         public PriceListViewHolder(View itemView) {
             super(itemView);
-
             haircutName = (TextView) itemView.findViewById(R.id.haircutName);
-            haircutPrice = (TextView) itemView.findViewById(R.id.haircutRrice);
-            haircutDuration = (TextView) itemView.findViewById(R.id.appDuration);
-
+            haircutPrice = (TextView) itemView.findViewById(R.id.customer);
+            haircutDuration = (TextView) itemView.findViewById(R.id.haircutStyle);
         }
-    }
+
+     }
 
 }

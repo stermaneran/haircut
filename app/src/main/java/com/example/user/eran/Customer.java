@@ -11,6 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
     public class Customer {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference ref = database.getReference("Users");
+    private static final String _path = "Customers";
 
    private String FirstName, LastName, UserName, Email, Password, Street, City, id, imagePath,Type,gender;
 
@@ -116,6 +117,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public static String get_path() {
+        return _path;
     }
 
     public void save()

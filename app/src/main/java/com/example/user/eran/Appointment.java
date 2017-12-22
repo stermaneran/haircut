@@ -8,9 +8,16 @@ import com.google.firebase.database.FirebaseDatabase;
  */
 
 public class Appointment {
+
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference ref = database.getReference("Appointments");
 
+
+    private static final String _path = "Appointments";
+
+
+    String _custID;
+    String _hcid;
     String _price;
     String _date;
     String _time;
@@ -21,6 +28,7 @@ public class Appointment {
     public Appointment() {}
 
 
+
     public Appointment(String cust ,String date, String time, String email,String price) {
         _date = date;
         _time = time;
@@ -29,49 +37,69 @@ public class Appointment {
         _cust = cust;
     }
 
-    public String get_price() {
-        return _price;
+
+    public static String get_path() {
+        return _path;
     }
 
-    public void set_price(String _price) {
-        this._price = _price;
+    public FirebaseDatabase getDatabase() {
+        return database;
     }
 
     public String get_date() {
         return _date;
     }
 
-    public void set_date(String _date) {
-        this._date = _date;
-    }
-
     public String get_time() {
         return _time;
     }
 
-    public void set_time(String _time) {
-        this._time = _time;
+    public String get_custID() {
+        return _custID;
     }
 
-    public String get_cust() {
-        return _email;
+    public String get_hcid() {
+        return _hcid;
     }
+
 
     public void set_cust(String _cust) {
         this._email = _cust;
     }
 
-    public void save()
-    {
+    public void set_price(String _price) {
+        this._price = _price;
+    }
+
+    public String get_price() {
+        return _price;
+    }
+
+    public void set_date(String _date) {
+        this._date = _date;
+    }
+
+
+    public void set_time(String _time) {
+        this._time = _time;
+    }
+
+
+
+    public String get_cust() {
+        return _email;
+    }
+
+    public void save() {
         DatabaseReference usersRef = ref.child(_cust);
         DatabaseReference c;
-        c=usersRef.child("Email");
+        c = usersRef.child("Email");
         c.setValue(_email);
-        c=usersRef.child("Date");
+        c = usersRef.child("Date");
         c.setValue(_date);
-        c=usersRef.child("Time");
+        c = usersRef.child("Time");
         c.setValue(_time);
-        c=usersRef.child("Price");
+        c = usersRef.child("Price");
         c.setValue(_price);
 
     }

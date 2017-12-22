@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,12 +22,12 @@ public class PricelistPage extends AppCompatActivity {
     private List<Haircut> listItems;
     private DividerItemDecoration itemDecoration;
     LinearLayoutManager layoutManager;
-    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child(Haircut.getPath());
+    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child(Haircut.get_path());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pricelist_page);
+        setContentView(R.layout.activity_generic_recycler_view);
 
         layoutManager = new LinearLayoutManager(this);
         itemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
@@ -38,7 +36,6 @@ public class PricelistPage extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(itemDecoration);
         listItems = new ArrayList<>();
-
 
 //        mRef.push().setValue(new Haircut("Men's Haircut","20","15"));
 //        mRef.push().setValue(new Haircut("Women's Haircut","35","25"));
@@ -52,21 +49,20 @@ public class PricelistPage extends AppCompatActivity {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot haircutEntry: dataSnapshot.getChildren()){
-                    Haircut haircut = JSONParser.getHaircutObject(haircutEntry.getValue().toString());
-                    listItems.add(haircut);
-                }
-                showList();
+                showList(dataSnapshot);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
     }
 
-    public void showList(){
+    public void showList(DataSnapshot dataSnapshot){
+        for(DataSnapshot haircutEntry: dataSnapshot.getChildren()){
+            Haircut haircut = JSONParser.getHaircutInstance(haircutEntry.getValue().toString());
+            listItems.add(haircut);
+        }
         adapter = new PriceListAdapter(listItems,this);
         recyclerView.setAdapter(adapter);
     }

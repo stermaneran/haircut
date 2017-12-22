@@ -21,7 +21,7 @@ public class Haircut {
         return _name;
     }
 
-    public static String getPath() {
+    public static String get_path() {
         return path;
     }
 
@@ -36,6 +36,8 @@ public class Haircut {
     public String toString(){
         return  _name + "\n" + _price + "\n" + _duration + "\n";
     }
+
+
 
 }
 
