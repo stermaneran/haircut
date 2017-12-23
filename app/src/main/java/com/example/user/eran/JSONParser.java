@@ -41,8 +41,9 @@ public class JSONParser {
         String time = args.get("_time");
         String custID = args.get("_custID");
         String HCID = args.get("_hcid");
+        String price = args.get("_price");
 
-        return new Appointment(date, time, custID,HCID);
+        return new Appointment(date, time, custID,HCID,price);
 
     }
 }

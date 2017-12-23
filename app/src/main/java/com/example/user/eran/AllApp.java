@@ -50,7 +50,6 @@ public class AllApp extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         //Get map of users in datasnapshot
-
                         Map<String,Object> usersMap= (Map<String, Object>) dataSnapshot.getValue();
 
                         if(usersMap!=null) {
