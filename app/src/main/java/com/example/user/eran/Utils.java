@@ -14,7 +14,7 @@ package com.example.user.eran;
         import android.widget.Toast;
 
 /**
- * Created by Shreya Kotak on 12/05/16.
+ * Created by Shay cohen on 12/05/16.
  */
 public class Utils {
     public static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;

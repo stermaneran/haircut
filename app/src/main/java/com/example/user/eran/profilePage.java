@@ -42,8 +42,6 @@ public class profilePage extends AppCompatActivity {
     private ValueEventListener listener;
 
 
-    //private View bedit_info;
-
     String userID;
 
     @Override
@@ -57,8 +55,6 @@ public class profilePage extends AppCompatActivity {
         maddress = (TextView) findViewById(R.id.address);
         gender = (TextView) findViewById(R.id.gender);
         mapp = (TextView) findViewById(R.id.app);
-
-        //bedit_info = findViewById(R.id.edit_info);
 
         imageView = (ImageView) findViewById(R.id.user_photo);
 

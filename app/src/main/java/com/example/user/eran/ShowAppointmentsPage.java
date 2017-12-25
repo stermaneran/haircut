@@ -6,12 +6,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +15,6 @@ import java.util.List;
 public class ShowAppointmentsPage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private PriceListAdapter adapter;
     private List<Appointment> listItems;
     private List<AppointmentDisplayItem> displayList;
     private DividerItemDecoration itemDecoration;
