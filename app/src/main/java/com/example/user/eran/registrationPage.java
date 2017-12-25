@@ -190,7 +190,8 @@ public class registrationPage extends AppCompatActivity {
     private void onCaptureImageResult(Intent data) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            profilePictureView.setImageBitmap(imageBitmap);
+            profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(imageBitmap, 120, 120, false));
+            //profilePictureView.setImageBitmap(imageBitmap);
             Toast.makeText(getApplicationContext(), "Camera picture Uploaded ", Toast.LENGTH_LONG).show();
             encodeBitmapAndSaveToFirebase(imageBitmap);
     }
@@ -206,18 +207,38 @@ public class registrationPage extends AppCompatActivity {
     private void onSelectFromGalleryResult(Intent data) {
         ContentResolver cR = this.getContentResolver();
         String type = cR.getType(filePath);
-        if (type.endsWith("jpeg") || type.endsWith("png") || type.endsWith("jpg")) {
-            Bitmap bm = null;
-            if (data != null) {
-                try {
-                    bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
-                } catch (IOException e) {
-                    e.printStackTrace();
+        if (type!=null) {
+            if (type.endsWith("jpeg") || type.endsWith("png") || type.endsWith("jpg")) {
+                Bitmap bm = null;
+                if (data != null) {
+                    try {
+                        bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
+                profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(bm, 120, 120, false));
+                //profilePictureView.setImageBitmap(bm);
+            } else {
+                toastMessage("invalid photo");
             }
-            profilePictureView.setImageBitmap(bm);
-        } else {
-            toastMessage("invalid photo");
+        }
+        else
+        {
+            if (filePath.toString().endsWith("jpeg") || filePath.toString().endsWith("png") || filePath.toString().endsWith("jpg")) {
+                Bitmap bm = null;
+                if (data != null) {
+                    try {
+                        bm = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), data.getData());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(bm, 120, 120, false));
+                //profilePictureView.setImageBitmap(bm);
+            } else {
+                toastMessage("invalid photo");
+            }
         }
     }
 

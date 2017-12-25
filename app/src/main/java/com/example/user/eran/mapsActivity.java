@@ -1,6 +1,8 @@
 package com.example.user.eran;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
@@ -35,20 +37,23 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
+    @SuppressLint("MissingPermission")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case MY_PERMISSION_FINE_LOCATION:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                        return;
-                    }
+                    //if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                     //   return;
+                    //}
                     mMap.setMyLocationEnabled(true);
                     return;
                 }
                 else{
                     Toast.makeText(this,"this app requires location permissions to be granted",Toast.LENGTH_SHORT).show();
+                    Intent myIntent = new Intent(mapsActivity.this, basePage.class);
+                    startActivityForResult(myIntent, 0);
                     finish();
                 }
                 mMap.setMyLocationEnabled(true);
