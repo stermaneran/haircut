@@ -7,21 +7,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -35,8 +27,6 @@ public class addApp extends AppCompatActivity {
     Button submitBtn,pickDateBtn,pickTimeBtn;
     TextView dateTitle,timeTitle;
     DatePickerDialog datePickerDialog;
-
-    private final DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Appointments");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

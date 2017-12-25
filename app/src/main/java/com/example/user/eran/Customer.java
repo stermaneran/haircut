@@ -7,7 +7,6 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by eran on 01/11/2017.
  */
 
-
     public class Customer {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference ref = database.getReference("Users");

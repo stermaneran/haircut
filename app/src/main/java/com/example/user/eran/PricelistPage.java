@@ -37,14 +37,6 @@ public class PricelistPage extends AppCompatActivity {
         recyclerView.addItemDecoration(itemDecoration);
         listItems = new ArrayList<>();
 
-//        mRef.push().setValue(new Haircut("Men's Haircut","20","15"));
-//        mRef.push().setValue(new Haircut("Women's Haircut","35","25"));
-//        mRef.push().setValue(new Haircut("Men's Beard Haircut","10","10"));
-//        mRef.push().setValue(new Haircut("Hair drying","40","30"));
-//        mRef.push().setValue(new Haircut("Hair dying","60","60"));
-//        mRef.push().setValue(new Haircut("Hair rolling","45","180"));
-//        mRef.push().setValue(new Haircut("Permanent straightening","700","240"));
-
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override

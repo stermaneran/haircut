@@ -113,12 +113,11 @@ public class registrationPage extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                if(imageEncoded==null)
-                                uploadFile();
-                                else{
-                                    String g =genderTgl.getText().toString();
-                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded,g).save();
-                                    //toastMessage("added user " + email);
+                                if (imageEncoded == null)
+                                    uploadFile();
+                                else {
+                                    String g = genderTgl.getText().toString();
+                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded, g).save();
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
@@ -128,8 +127,6 @@ public class registrationPage extends AppCompatActivity {
                             }
                         }
                     });
-                } else {
-                    //toastMessage("You didn't fill in all the fields.");
                 }
             }
         });
@@ -191,7 +188,6 @@ public class registrationPage extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(imageBitmap, 120, 120, false));
-            //profilePictureView.setImageBitmap(imageBitmap);
             Toast.makeText(getApplicationContext(), "Camera picture Uploaded ", Toast.LENGTH_LONG).show();
             encodeBitmapAndSaveToFirebase(imageBitmap);
     }
@@ -218,7 +214,6 @@ public class registrationPage extends AppCompatActivity {
                     }
                 }
                 profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(bm, 120, 120, false));
-                //profilePictureView.setImageBitmap(bm);
             } else {
                 toastMessage("invalid photo");
             }
@@ -235,7 +230,6 @@ public class registrationPage extends AppCompatActivity {
                     }
                 }
                 profilePictureView.setImageBitmap(Bitmap.createScaledBitmap(bm, 120, 120, false));
-                //profilePictureView.setImageBitmap(bm);
             } else {
                 toastMessage("invalid photo");
             }
@@ -350,7 +344,6 @@ public class registrationPage extends AppCompatActivity {
                                     Uri  pic = taskSnapshot.getMetadata().getDownloadUrl();
                                     String g =genderTgl.getText().toString();
                                     new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString(),g).save();
-                                    //toastMessage("added user " + email);
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
