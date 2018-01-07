@@ -1,5 +1,6 @@
 package com.example.user.eran;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -12,6 +13,7 @@ public class Appointment {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     final DatabaseReference ref = database.getReference("Appointments");
 
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private static final String _path = "Appointments";
 
@@ -91,7 +93,7 @@ public class Appointment {
     }
 
     public void save() {
-        DatabaseReference usersRef = ref.child(_cust);
+        DatabaseReference usersRef = ref.push();
         DatabaseReference c;
         c = usersRef.child("Email");
         c.setValue(_email);

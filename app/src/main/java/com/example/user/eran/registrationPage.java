@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
@@ -118,6 +119,7 @@ public class registrationPage extends AppCompatActivity {
                                 else {
                                     String g = genderTgl.getText().toString();
                                     new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded, g).save();
+                                    logRegistration();
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
@@ -127,6 +129,8 @@ public class registrationPage extends AppCompatActivity {
                             }
                         }
                     });
+
+
                 }
             }
         });
@@ -386,5 +390,12 @@ public class registrationPage extends AppCompatActivity {
             finish();
         }
     }
+
+
+    void logRegistration(){
+        Analytics.logEventSignUp(this);
+    }
+
+
 
 }

@@ -116,6 +116,10 @@ public class addApp extends AppCompatActivity {
                     Appointment app = new Appointment(mAuth.getCurrentUser().getUid(),datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
                     app.save();
                     toastMessage("Appointment submitted");
+
+
+
+
                  Intent myIntent = new Intent(addApp.this, basePage.class);
                  startActivityForResult(myIntent, 0);
                  finish();

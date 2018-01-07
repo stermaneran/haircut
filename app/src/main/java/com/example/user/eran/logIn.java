@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,6 +27,7 @@ public class logIn extends AppCompatActivity {
 
     private FirebaseAuth.AuthStateListener mAuthListener;
 
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -78,6 +80,11 @@ public class logIn extends AppCompatActivity {
                     //requesting Firebase server
                     showProcessDialog();
                     authenticateUser(Utils.getText(emailField), Utils.getText(passwordField));
+
+
+
+
+
                 }
             }
         });
