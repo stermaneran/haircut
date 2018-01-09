@@ -3,6 +3,7 @@ package com.example.user.eran;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -62,6 +63,7 @@ public class registrationPage extends AppCompatActivity {
     ToggleButton genderTgl;
     TextView profilePicTitle, registTitle, addrTitle;
     ImageView profilePictureView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
