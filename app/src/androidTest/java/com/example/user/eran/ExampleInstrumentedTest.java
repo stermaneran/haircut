@@ -24,3 +24,6 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.user.eran", appContext.getPackageName());
     }
 }
+
+
+//erans test!!!
