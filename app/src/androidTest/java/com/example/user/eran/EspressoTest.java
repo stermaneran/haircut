@@ -7,6 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.pressBack;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -47,12 +48,15 @@ public class EspressoTest {
     //  Checks that the user we added by the admin, succeeded loging in, and that the branches_text
     @Test
     public void intentHappened() throws InterruptedException {
+        sleep(500);
         onView(withId(R.id.email)).perform(typeText("admin@gmail.com"));
         sleep(500);
         onView(withId(R.id.pass)).perform(typeText("admin12"));
         sleep(500);
-        sleep(500);
+        pressBack();
+        sleep(5000);
         onView(withId(R.id.login)).perform(click());
-        sleep(10000);
+        sleep(2000);
+        onView(withId(R.id.btnSignOut)).perform(click());
     }
 }
