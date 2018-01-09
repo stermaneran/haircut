@@ -10,4 +10,34 @@
     <string name="title_activity_prifile">prifile</string>
     <string name="title_activity_users_page">usersPage</string>
     <string name="title_activity_add_app">addApp</string>
+    <string name="enter_username">Enter your username</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="create_username">Enter a username</string>
+    <string name="create_password">Create a password</string>
+    <string name="ver_password">Verify your password</string>
+    <string name="Register">Register</string>
+    <string name="Login">Login</string>
+    <string name="or_text">OR</string>
+    <string name="back_button">Back</string>
+    <string name="branches_text">Branches</string>
+    <string name="jerusalem_button">Jerusalem</string>
+    <string name="petah_tikwa_button">Petah Tikwa</string>
+    <string name="tlv_button">Tel-Aviv</string>
+    <string name="your_items">Your Items:</string>
+    <string name="items">Items</string>
+
+
+    <!--Toast strings:-->
+    <string name="pass_incorrect">Password incorrect</string>
+    <string name="access_granted">Access granted</string>
+    <string name="user_not_found">User not found</string>
+    <string name="fill_user_pass">Fill username and password</string>
+    <string name="user_length_min">User Name must be at least 5 character long</string>
+    <string name="pass_length_min">Password must be at least 6 character long</string>
+    <string name="pass_ver_failed">The password verification failed</string>
+    <string name="user_exists">User already exists</string>
+    <string name="welcome">Welcome %s</string>
+    <string name="fill_all_fields">You must fill all of the fields</string>
+    <string name="get_curr_loc_btn">Going to your location</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.user.eran;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,6 +29,7 @@ public class logIn extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private FirebaseAnalytics mFirebaseAnalytics;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
