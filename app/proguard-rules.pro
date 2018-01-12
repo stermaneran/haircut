@@ -23,3 +23,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+# We keep the whole Haircut class because the program create new instances of this class in runtime.
+
+-keep public class Haircut
