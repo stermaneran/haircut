@@ -88,48 +88,34 @@ public class profilePage extends AppCompatActivity {
     }
 
     private void showData(DataSnapshot dataSnapshot) {
-        Customer uInfo = new Customer();
         dataSnapshot = dataSnapshot.child("Users").child(userID);
-
-       // uInfo.set
-        uInfo.setFname(dataSnapshot.child("FirstName").getValue().toString());
-        uInfo.setGender(dataSnapshot.child("Gender").getValue().toString());
-        uInfo.setLname(dataSnapshot.child("LastName").getValue().toString());
-        uInfo.setCity(dataSnapshot.child("City").getValue().toString());
-        uInfo.setStreet(dataSnapshot.child("Street").getValue().toString());
-        uInfo.setUname(dataSnapshot.child("UserName").getValue().toString());
-
-        uInfo.setImagePath(dataSnapshot.child("Photo").getValue().toString());
-
-        if (!uInfo.getImagePath().contains("http")) {
+        Customer uInfo= dataSnapshot.getValue(Customer.class);
+        if (!uInfo.imagePath.contains("http")) {
             try {
-                Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.getImagePath());
+                Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.imagePath);
                 imageView.setImageBitmap(imageBitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
             else{
-                Picasso.with(profilePage.this).load(uInfo.getImagePath()).into(imageView);
+                Picasso.with(profilePage.this).load(uInfo.imagePath).into(imageView);
             }
-        gender.setText("Gender: " + uInfo.getGender());
-        mfull_name.setText("Full Name: " + uInfo.getFname() + " " + uInfo.getLname());
-        mdisplayed_name.setText("User Name: " +uInfo.getUname());
+        gender.setText("Gender: " + uInfo.gender);
+        mfull_name.setText("Full Name: " + uInfo.FirstName + " " + uInfo.LastName);
+        mdisplayed_name.setText("User Name: " +uInfo.UserName);
         memail_field.setText("Email: " +user.getEmail());
-        maddress.setText("Address: " +uInfo.getStreet() + ", " + uInfo.getCity());
+        maddress.setText("Address: " +uInfo.Street + ", " + uInfo.City);
     }
 
 
     private void showApp(DataSnapshot dataSnapshot) {
-        Appointment uInfo = new Appointment();
+
         dataSnapshot = dataSnapshot.child("Appointments").child(userID);
+        Appointment uInfo= dataSnapshot.getValue(Appointment.class);
 
-        // uInfo.set
         if(dataSnapshot.getValue()!=null) {
-            uInfo.set_date(dataSnapshot.child("Date").getValue().toString());
-            uInfo.set_time(dataSnapshot.child("Time").getValue().toString());
-
-            mapp.setText("Appointment: " + uInfo.get_date() + " at " + uInfo.get_time());
+            mapp.setText("Appointment: " + uInfo._date + " at " + uInfo._time);
         }
         else{
          mapp.setText("No Appointments set");

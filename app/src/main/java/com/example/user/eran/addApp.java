@@ -13,7 +13,11 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -22,10 +26,10 @@ import java.util.Locale;
 public class addApp extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    protected  String datestr;
-    protected  String timestr;
-    Button submitBtn,pickDateBtn,pickTimeBtn;
-    TextView dateTitle,timeTitle;
+    protected String datestr;
+    protected String timestr;
+    Button submitBtn, pickDateBtn, pickTimeBtn;
+    TextView dateTitle, timeTitle;
     DatePickerDialog datePickerDialog;
 
     @Override
@@ -64,14 +68,14 @@ public class addApp extends AppCompatActivity {
                                 mcurrentDate.set(Calendar.DAY_OF_MONTH, selectedday);
                                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
                                 dateTitle.setText(sdf.format(mcurrentDate.getTime()));
-                                datestr=selectedday + "/"
+                                datestr = selectedday + "/"
                                         + (selectedmonth + 1) + "/" + selectedyear;
                             }
 
-                        },mYear, mMonth, mDay);
+                        }, mYear, mMonth, mDay);
 
-                mcurrentDate.set(mYear,mMonth,mDay);
-                long value=mcurrentDate.getTimeInMillis();
+                mcurrentDate.set(mYear, mMonth, mDay);
+                long value = mcurrentDate.getTimeInMillis();
                 datePickerDialog.getDatePicker().setMinDate(value);
 
                 datePickerDialog.show();
@@ -90,20 +94,19 @@ public class addApp extends AppCompatActivity {
                         new TimePickerDialog.OnTimeSetListener() {
 
                             @Override
-                            public void onTimeSet(TimePicker timePicker, int i, int i1){
-                                String myHour= Integer.toString(i);
-                                String myminute=Integer.toString(i1);
-                                if(i<10){
-                                    myHour= "0"+myHour;
+                            public void onTimeSet(TimePicker timePicker, int i, int i1) {
+                                String myHour = Integer.toString(i);
+                                String myminute = Integer.toString(i1);
+                                if (i < 10) {
+                                    myHour = "0" + myHour;
                                 }
-                                if(i1<10)
-                                {
-                                    myminute="0"+myminute;
+                                if (i1 < 10) {
+                                    myminute = "0" + myminute;
                                 }
                                 timestr = myHour + ":" + myminute;
                                 timeTitle.setText(timestr);
                             }
-                        }, mHour,mMinutes,true);
+                        }, mHour, mMinutes, true);
                 timePicker.show();
             }
         });
@@ -112,30 +115,32 @@ public class addApp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-             if(validateForm()) {
-                    Appointment app = new Appointment(mAuth.getCurrentUser().getUid(),datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
-                    app.save();
+                if (validateForm()) {
+                    Appointment app = new Appointment(mAuth.getCurrentUser().getUid(), datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference ref = database.getReference("Appointments");
+                    ref.child(mAuth.getCurrentUser().getUid()).setValue(app);
+
                     toastMessage("Appointment submitted");
 
 
-
-
-                 Intent myIntent = new Intent(addApp.this, basePage.class);
-                 startActivityForResult(myIntent, 0);
-                 finish();
+                    Intent myIntent = new Intent(addApp.this, basePage.class);
+                    startActivityForResult(myIntent, 0);
+                    finish();
                 }
             }
         });
 
     }
 
-    public boolean validateForm(){
-        if (datestr==null) {
+    public boolean validateForm() {
+        if (datestr == null) {
             toastMessage("Enter Date");
             return false;
         }
 
-        if (timestr==null) {
+        if (timestr == null) {
             toastMessage("Enter Time");
             return false;
         }

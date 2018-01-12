@@ -3,7 +3,6 @@ package com.example.user.eran;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -31,6 +30,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -43,7 +44,7 @@ import java.io.IOException;
 public class registrationPage extends AppCompatActivity {
 
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
-    private String userChoosenTask;
+   // private String userChoosenTask;
     private String imageEncoded;
     private StorageReference mStorageRef;
     private Uri filePath;
@@ -63,6 +64,8 @@ public class registrationPage extends AppCompatActivity {
     ToggleButton genderTgl;
     TextView profilePicTitle, registTitle, addrTitle;
     ImageView profilePictureView;
+
+    FirebaseAnalytics mFirebaseAnalytics;
 
 
     @Override
@@ -91,6 +94,9 @@ public class registrationPage extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+
         uploadImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,11 +122,21 @@ public class registrationPage extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+
+
                                 if (imageEncoded == null)
                                     uploadFile();
                                 else {
                                     String g = genderTgl.getText().toString();
-                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded, g).save();
+
+                                    mFirebaseAnalytics.setUserProperty("my_city", city);
+                                    mFirebaseAnalytics.setUserProperty("my_gender", g);
+                                    mFirebaseAnalytics.setUserProperty("my_test", "testing12");
+
+                                    Customer c =new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded, g);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                     DatabaseReference ref = database.getReference("Users");
+                                     ref.child(mAuth.getCurrentUser().getUid()).setValue(c);
                                     logRegistration();
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
@@ -148,11 +164,11 @@ public class registrationPage extends AppCompatActivity {
                     boolean result=Utils.checkPermission(registrationPage.this);
 
                     if (items[item].equals("Take Photo")) {
-                        userChoosenTask ="Take Photo";
+                        //userChoosenTask ="Take Photo";
                         if(result)
                             cameraIntent();
                     } else if (items[item].equals("Choose from Library")) {
-                        userChoosenTask ="Choose from Library";
+                       // userChoosenTask ="Choose from Library";
                         if(result)
                             galleryIntent();
                     } else if (items[item].equals("Cancel")) {
@@ -349,7 +365,11 @@ public class registrationPage extends AppCompatActivity {
                                     @SuppressWarnings("VisibleForTests")
                                     Uri  pic = taskSnapshot.getMetadata().getDownloadUrl();
                                     String g =genderTgl.getText().toString();
-                                    new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString(),g).save();
+
+                                    Customer c =new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString(),g);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference ref = database.getReference("Users");
+                                    ref.child(mAuth.getCurrentUser().getUid()).setValue(c);
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
@@ -386,7 +406,13 @@ public class registrationPage extends AppCompatActivity {
         //if there is not any file
         else {
             String g =genderTgl.getText().toString();
-            new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4",g).save();
+
+            Customer c = new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4",g);
+
+            DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+            String uid = mAuth.getCurrentUser().getUid();
+            ref.child("Users").child(uid).setValue(c);
+
             Intent myIntent = new Intent(registrationPage.this, logIn.class);
             startActivityForResult(myIntent, 0);
             finish();
