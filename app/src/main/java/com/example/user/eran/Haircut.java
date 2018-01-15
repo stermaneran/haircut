@@ -6,38 +6,34 @@ package com.example.user.eran;
 
 public class Haircut {
 
-    static final String path = "Haircuts";
+    public String _name, _price, _duration;
 
-    private String _name,_price, _duration;
-
-    public Haircut(String name,String price, String duration){
+    public Haircut(String name, String price, String duration) {
         _name = name;
         _price = price;
         _duration = duration;
     }
 
-
-    public String get_name() {
-        return _name;
+    public Haircut() {
+        //for firbase
     }
 
-    public static String get_path() {
-        return path;
-    }
-
-    public String get_duration() {
-        return _duration;
-    }
-
-    public String get_price(){
-        return _price;
-    }
-
-    public String toString(){
-        return  _name + "\n" + _price + "\n" + _duration + "\n";
-    }
-
-
-
+//    public void build(){
+//        Haircut h = new Haircut("Men's Haircut","20","15");
+//        Haircut h1 = new Haircut("Women's Haircut","25","35");
+//        Haircut h2 = new Haircut("Men's Beard Haircut","10","10");
+//        Haircut h3 = new Haircut("Hair drying","400","30");
+//        Haircut h4 = new Haircut("Hair dying","60","60");
+//        Haircut h5 = new Haircut("Hair rolling","45","180");
+//        Haircut h6 = new Haircut("Permanent Hair Straightening","700","240");
+//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+//        ref.child("Haircuts").child("H1").setValue(h);
+//        ref.child("Haircuts").child("H2").setValue(h1);
+//        ref.child("Haircuts").child("H3").setValue(h2);
+//        ref.child("Haircuts").child("H4").setValue(h3);
+//        ref.child("Haircuts").child("H5").setValue(h4);
+//        ref.child("Haircuts").child("H6").setValue(h5);
+//        ref.child("Haircuts").child("H7").setValue(h6);
+//    }
 }
 

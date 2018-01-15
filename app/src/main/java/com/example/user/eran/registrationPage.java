@@ -44,7 +44,6 @@ import java.io.IOException;
 public class registrationPage extends AppCompatActivity {
 
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
-   // private String userChoosenTask;
     private String imageEncoded;
     private StorageReference mStorageRef;
     private Uri filePath;
@@ -131,7 +130,6 @@ public class registrationPage extends AppCompatActivity {
 
                                     mFirebaseAnalytics.setUserProperty("my_city", city);
                                     mFirebaseAnalytics.setUserProperty("my_gender", g);
-                                    mFirebaseAnalytics.setUserProperty("my_test", "testing12");
 
                                     Customer c =new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), imageEncoded, g);
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -164,11 +162,9 @@ public class registrationPage extends AppCompatActivity {
                     boolean result=Utils.checkPermission(registrationPage.this);
 
                     if (items[item].equals("Take Photo")) {
-                        //userChoosenTask ="Take Photo";
                         if(result)
                             cameraIntent();
                     } else if (items[item].equals("Choose from Library")) {
-                       // userChoosenTask ="Choose from Library";
                         if(result)
                             galleryIntent();
                     } else if (items[item].equals("Cancel")) {
@@ -213,7 +209,6 @@ public class registrationPage extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Camera picture Uploaded ", Toast.LENGTH_LONG).show();
             encodeBitmapAndSaveToFirebase(imageBitmap);
     }
-    //test
 
     private void encodeBitmapAndSaveToFirebase(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -366,6 +361,9 @@ public class registrationPage extends AppCompatActivity {
                                     Uri  pic = taskSnapshot.getMetadata().getDownloadUrl();
                                     String g =genderTgl.getText().toString();
 
+                                    mFirebaseAnalytics.setUserProperty("my_city", city);
+                                    mFirebaseAnalytics.setUserProperty("my_gender", g);
+
                                     Customer c =new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(), pic.toString(),g);
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                     DatabaseReference ref = database.getReference("Users");
@@ -407,6 +405,9 @@ public class registrationPage extends AppCompatActivity {
         else {
             String g =genderTgl.getText().toString();
 
+            mFirebaseAnalytics.setUserProperty("my_city", city);
+            mFirebaseAnalytics.setUserProperty("my_gender", g);
+
             Customer c = new Customer(fname, lname, uname, email, pass1, street, city, mAuth.getCurrentUser().getUid(),"https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4",g);
 
             DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
@@ -418,12 +419,7 @@ public class registrationPage extends AppCompatActivity {
             finish();
         }
     }
-
-
     void logRegistration(){
         Analytics.logEventSignUp(this);
     }
-
-
-
 }

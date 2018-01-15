@@ -13,22 +13,19 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false 
-            useProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-//    implementation 'com.google.firebase:firebase-core:11.0.4'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //compile 'com.android.support:support-v4:26.0.0'
-    //compile 'com.google.android.gms:play-services-maps:11.0.4'
-    //compile 'com.android.support:design:26.1.0'
 
 
     compile 'com.android.support:appcompat-v7:26.+'
@@ -52,3 +49,4 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.android.library'

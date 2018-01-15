@@ -22,7 +22,7 @@ public class PricelistPage extends AppCompatActivity {
     private List<Haircut> listItems;
     private DividerItemDecoration itemDecoration;
     LinearLayoutManager layoutManager;
-    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child(Haircut.get_path());
+    DatabaseReference mRef = FirebaseDatabase.getInstance().getReference().child("Haircuts");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class PricelistPage extends AppCompatActivity {
         setContentView(R.layout.activity_generic_recycler_view);
 
         layoutManager = new LinearLayoutManager(this);
-        itemDecoration = new DividerItemDecoration(this,layoutManager.getOrientation());
+        itemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
@@ -50,12 +50,14 @@ public class PricelistPage extends AppCompatActivity {
         });
     }
 
-    public void showList(DataSnapshot dataSnapshot){
-        for(DataSnapshot haircutEntry: dataSnapshot.getChildren()){
-            Haircut haircut = JSONParser.getHaircutInstance(haircutEntry.getValue().toString());
+    public void showList(DataSnapshot dataSnapshot) {
+//      Haircut haircut1 = new Haircut("","","");
+//      haircut1.build();
+        for (DataSnapshot haircutEntry : dataSnapshot.getChildren()) {
+            Haircut haircut = haircutEntry.getValue(Haircut.class);
             listItems.add(haircut);
         }
-        adapter = new PriceListAdapter(listItems,this);
+        adapter = new PriceListAdapter(listItems, this);
         recyclerView.setAdapter(adapter);
     }
 

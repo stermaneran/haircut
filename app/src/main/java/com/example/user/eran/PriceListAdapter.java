@@ -20,7 +20,7 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
     private Context mContext;
 
 
-    protected PriceListAdapter(List<Haircut> haircutsList, Context context){
+    protected PriceListAdapter(List<Haircut> haircutsList, Context context) {
         _haircutsList = haircutsList;
         mContext = context;
     }
@@ -35,9 +35,9 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
     @Override
     public void onBindViewHolder(final PriceListViewHolder holder, int position) {
         final Haircut haircutItem = _haircutsList.get(position);
-        holder.haircutName.setText(haircutItem.get_name());
-        holder.haircutPrice.setText("Price: " + haircutItem.get_price() +"$");
-        holder.haircutDuration.setText("Appointment duration requierd: " + haircutItem.get_duration() + " minutes");
+        holder.haircutName.setText(haircutItem._name);
+        holder.haircutPrice.setText("Price: " + haircutItem._price + "$");
+        holder.haircutDuration.setText("Appointment duration requierd: " + haircutItem._duration + " minutes");
     }
 
     @Override
@@ -45,7 +45,7 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
         return _haircutsList.size();
     }
 
-     protected class PriceListViewHolder extends RecyclerView.ViewHolder {
+    protected class PriceListViewHolder extends RecyclerView.ViewHolder {
 
         TextView haircutName;
         TextView haircutPrice;
@@ -58,6 +58,6 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
             haircutDuration = (TextView) itemView.findViewById(R.id.haircutStyle);
         }
 
-     }
+    }
 
 }

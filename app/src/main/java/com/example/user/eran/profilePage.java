@@ -71,7 +71,7 @@ public class profilePage extends AppCompatActivity {
         userID = user.getUid();
 
         // Read from the database
-        listener =myRef.addValueEventListener(new ValueEventListener() {
+        listener = myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 showData(dataSnapshot);
@@ -89,7 +89,7 @@ public class profilePage extends AppCompatActivity {
 
     private void showData(DataSnapshot dataSnapshot) {
         dataSnapshot = dataSnapshot.child("Users").child(userID);
-        Customer uInfo= dataSnapshot.getValue(Customer.class);
+        Customer uInfo = dataSnapshot.getValue(Customer.class);
         if (!uInfo.imagePath.contains("http")) {
             try {
                 Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.imagePath);
@@ -97,28 +97,26 @@ public class profilePage extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } else {
+            Picasso.with(profilePage.this).load(uInfo.imagePath).into(imageView);
         }
-            else{
-                Picasso.with(profilePage.this).load(uInfo.imagePath).into(imageView);
-            }
         gender.setText("Gender: " + uInfo.gender);
         mfull_name.setText("Full Name: " + uInfo.FirstName + " " + uInfo.LastName);
-        mdisplayed_name.setText("User Name: " +uInfo.UserName);
-        memail_field.setText("Email: " +user.getEmail());
-        maddress.setText("Address: " +uInfo.Street + ", " + uInfo.City);
+        mdisplayed_name.setText("User Name: " + uInfo.UserName);
+        memail_field.setText("Email: " + user.getEmail());
+        maddress.setText("Address: " + uInfo.Street + ", " + uInfo.City);
     }
 
 
     private void showApp(DataSnapshot dataSnapshot) {
 
         dataSnapshot = dataSnapshot.child("Appointments").child(userID);
-        Appointment uInfo= dataSnapshot.getValue(Appointment.class);
+        Appointment uInfo = dataSnapshot.getValue(Appointment.class);
 
-        if(dataSnapshot.getValue()!=null) {
+        if (dataSnapshot.getValue() != null) {
             mapp.setText("Appointment: " + uInfo._date + " at " + uInfo._time);
-        }
-        else{
-         mapp.setText("No Appointments set");
+        } else {
+            mapp.setText("No Appointments set");
         }
 
     }
@@ -130,10 +128,8 @@ public class profilePage extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if ((keyCode == KeyEvent.KEYCODE_BACK))
-        {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             myRef.removeEventListener(listener);
             finish();
         }
