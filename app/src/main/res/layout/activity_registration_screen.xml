@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:text="Address:"
         android:layout_above="@+id/streetBox"
-        android:layout_alignStart="@+id/streetBox" />
+        android:layout_alignStart="@+id/streetBox"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/registTitle"
@@ -24,7 +25,8 @@
         android:layout_marginTop="17dp"
         android:text="Registration"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/unBox"
@@ -37,7 +39,8 @@
         android:inputType="textPersonName"
         android:layout_marginTop="42dp"
         android:layout_below="@+id/datebox"
-        android:layout_alignStart="@+id/timebox" />
+        android:layout_alignStart="@+id/timebox"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/passBox"
@@ -49,7 +52,8 @@
         android:layout_below="@+id/editText5"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/cityBox"
@@ -62,7 +66,8 @@
         android:inputType="textPersonName"
         android:layout_marginTop="12dp"
         android:layout_below="@+id/confPassBox"
-        android:layout_alignEnd="@+id/confPassBox" />
+        android:layout_alignEnd="@+id/confPassBox"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editText5"
@@ -74,7 +79,8 @@
         android:hint="Barber@BarberShop.com"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/unBox"
-        android:layout_alignStart="@+id/unBox" />
+        android:layout_alignStart="@+id/unBox"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/datebox"
@@ -87,7 +93,8 @@
         android:inputType="textPersonName"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/registTitle"
-        android:layout_alignStart="@+id/registTitle" />
+        android:layout_alignStart="@+id/registTitle"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/streetBox"
@@ -100,7 +107,8 @@
         android:layout_toStartOf="@+id/cityBox"
         android:ems="10"
         android:hint="Street"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/submitBtn"
@@ -111,7 +119,8 @@
         android:layout_below="@+id/cityBox"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Submit" />
+        android:text="Submit"
+        tools:ignore="HardcodedText" />
 
 
     <EditText
@@ -124,7 +133,8 @@
         android:hint="Last Name"
         android:inputType="textPersonName"
         android:layout_below="@+id/datebox"
-        android:layout_alignStart="@+id/datebox" />
+        android:layout_alignStart="@+id/datebox"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/confPassBox"
@@ -134,7 +144,8 @@
         android:layout_below="@+id/passBox"
         android:ems="10"
         android:hint="Confirm Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/profilePicTitle"
@@ -142,7 +153,8 @@
         android:layout_height="wrap_content"
         android:text="Profile picture:"
         android:layout_above="@+id/profilePictureView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        tools:ignore="HardcodedText" />
 
     <ImageButton
         android:id="@+id/uploadImageBtn"
@@ -176,6 +188,7 @@
         android:text="ToggleButton"
         android:textOff="Male"
         android:textOn="Female"
-        tools:text="male" />
+        tools:text="male"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

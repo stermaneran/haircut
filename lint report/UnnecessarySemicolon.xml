@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>117</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp boolean onContextItemSelected(android.view.MenuItem item)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unnecessary semicolon</problem_class>
+    <description>Unnecessary semicolon &lt;code&gt;;&lt;/code&gt; #loc</description>
+  </problem>
+</problems>
+

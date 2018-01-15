@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>20</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>33</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>52</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>62</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>74</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>84</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>96</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>108</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml</file>
+    <line>13</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml</file>
+    <line>21</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>14</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>23</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml</file>
+    <line>28</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;elevation&lt;/code&gt; is only used in API level 21 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml</file>
+    <line>29</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attribute unused on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;Attribute &lt;code&gt;fontFamily&lt;/code&gt; is only used in API level 16 and higher (current min is 15)&lt;/html&gt;</description>
+  </problem>
+</problems>
+

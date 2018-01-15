@@ -53,8 +53,9 @@ public class basePage extends AppCompatActivity {
         //get current user
         user = mAuth.getCurrentUser();
 
-        userID = user.getUid();
-
+//        if(user!=null) {
+            userID = user.getUid();
+//        }
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

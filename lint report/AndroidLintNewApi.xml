@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml</file>
+    <line>34</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Large&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml</file>
+    <line>45</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Subhead&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml</file>
+    <line>57</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/pricelist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Subhead&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>36</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Large&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>50</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Large&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>61</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Medium&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml</file>
+    <line>71</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/appointmentlist_item.xml" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Calling new methods on older versions</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;@android:style/TextAppearance.Material.Small&lt;/code&gt; requires API level 21 (current min is 15)&lt;/html&gt;</description>
+  </problem>
+</problems>
+

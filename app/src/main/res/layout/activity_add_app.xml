@@ -17,7 +17,8 @@
             android:layout_marginTop="17dp"
             android:text="Appointment"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/submitBtn"
@@ -28,7 +29,8 @@
         android:layout_marginTop="112dp"
         android:text="Submit"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="445dp" />
+        tools:layout_editor_absoluteY="445dp"
+        tools:ignore="HardcodedText" />
 
 
     <Button
@@ -39,7 +41,8 @@
         android:layout_marginTop="58dp"
         android:layout_toLeftOf="@+id/dateTitle"
         android:layout_toStartOf="@+id/dateTitle"
-        android:text="pick date" />
+        android:text="pick date"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/pickTimeBtn"
@@ -48,7 +51,8 @@
         android:layout_alignBottom="@+id/timeTitle"
         android:layout_alignEnd="@+id/pickDateBtn"
         android:layout_alignRight="@+id/pickDateBtn"
-        android:text="pick time" />
+        android:text="pick time"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/dateTitle"
@@ -64,7 +68,8 @@
         android:text="DD-MM-YY"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/timeTitle"
@@ -80,7 +85,8 @@
         android:text="HH:MM"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView5"
@@ -96,7 +102,8 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/spinner"

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/androidTest/java/com/example/user/eran/MockitoTest.java</file>
+    <line>20</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.MockitoTest Password" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem java.lang.String get_appDuration()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>15</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem AppointmentDisplayItem(java.lang.String date, java.lang.String time, java.lang.String customerFullName, java.lang.String HC, java.lang.String AD)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Constructor is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>35</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem java.lang.String get_haircusStyle()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>23</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem java.lang.String get_date()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem java.lang.String get_custFullName()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>27</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AppointmentDisplayItem java.lang.String get_time()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>&lt;ul&gt;&lt;li&gt;Method owner class is never instantiated OR&lt;/li&gt;&lt;li&gt;An instantiation is not reachable from entry points.&lt;/li&gt;&lt;/ul&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>20</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter mContext" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/JSONParser.java</file>
+    <line>13</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.JSONParser com.example.user.eran.Haircut getHaircutInstance(java.lang.String jsonToParse)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>155</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onProfileImageViewClick(android.view.View v)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <hints>
+      <hint value="v" />
+    </hints>
+    <description>Parameter &lt;code&gt;v&lt;/code&gt; is not used  in either this method or any of its derived methods</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>64</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.registrationPage registTitle" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>64</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.registrationPage profilePicTitle" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>64</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.registrationPage addrTitle" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>136</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.logIn void toastMessage(java.lang.String message)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.logIn mFirebaseAnalytics" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field has no usages.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/mapsActivity.java</file>
+    <line>57</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.mapsActivity void toastMessage(java.lang.String message)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Customer.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Customer Email" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Customer.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Customer id" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Customer.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Customer Password" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Customer.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Customer Type" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Appointment.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Appointment _price" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Appointment.java</file>
+    <line>13</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Appointment _cust" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Appointment.java</file>
+    <line>12</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Appointment _email" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Analytics.java</file>
+    <line>13</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.Analytics mFirebaseAnalytics" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field has no usages.</description>
+  </problem>
+</problems>
+

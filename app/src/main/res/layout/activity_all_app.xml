@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -13,7 +14,8 @@
         android:text="    Appointments"
         android:textColor="@android:color/black"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,7 +38,8 @@
                 android:textAlignment="textStart"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
 
             <ListView
                 android:id="@+id/listv"

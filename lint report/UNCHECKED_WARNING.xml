@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>53</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp$1 void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.Map&lt;java.lang.String,java.lang.Object&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>49</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers$1 void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unchecked warning</problem_class>
+    <description>Unchecked cast: 'java.lang.Object' to 'java.util.Map&lt;java.lang.String,java.lang.Object&gt;'</description>
+  </problem>
+</problems>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>28</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java" />
+    <problem_class severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Code contains STOPSHIP marker</problem_class>
+    <hints />
+    <description>&lt;html&gt;&lt;code&gt;STOPSHIP&lt;/code&gt; comment found; points to code which must be fixed prior to release&lt;/html&gt;</description>
+  </problem>
+</problems>
+

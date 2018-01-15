@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_app.xml</file>
+    <line>44</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_all_app.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested scrolling widgets</problem_class>
+    <hints />
+    <description>&lt;html&gt;The vertically scrolling &lt;code&gt;ScrollView&lt;/code&gt; should not contain another vertically scrolling widget (&lt;code&gt;ListView&lt;/code&gt;)&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_users_page.xml</file>
+    <line>31</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_users_page.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Nested scrolling widgets</problem_class>
+    <hints />
+    <description>&lt;html&gt;The vertically scrolling &lt;code&gt;ScrollView&lt;/code&gt; should not contain another vertically scrolling widget (&lt;code&gt;ListView&lt;/code&gt;)&lt;/html&gt;</description>
+  </problem>
+</problems>
+

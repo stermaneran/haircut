@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Utils.java</file>
+    <line>60</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.Utils java.lang.String getText(android.support.design.widget.TextInputLayout inputLayout)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getText&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Utils.java</file>
+    <line>56</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.Utils boolean hasText(android.support.design.widget.TextInputLayout inputLayout)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getText&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>71</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>93</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void showData(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Dereference of &lt;code&gt;uInfo&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>117</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void showApp(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Dereference of &lt;code&gt;uInfo&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>361</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage$7$1 void onSuccess(android.net.Uri uri)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getDownloadUrl&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>367</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage$7$1 void onSuccess(android.net.Uri uri)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;toString&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>207</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCaptureImageResult(android.content.Intent data)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;get&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>208</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCaptureImageResult(android.content.Intent data)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;imageBitmap&lt;/code&gt; might be null</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>134</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage$3$1 void onComplete(com.google.android.gms.tasks.Task&lt;com.google.firebase.auth.AuthResult&gt; task)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>347</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void uploadFile()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>411</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void uploadFile()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>233</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onSelectFromGalleryResult(android.content.Intent data)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;bm&lt;/code&gt; might be null</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>249</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onSelectFromGalleryResult(android.content.Intent data)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Argument &lt;code&gt;bm&lt;/code&gt; might be null</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>163</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage boolean isAdmin(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;toString&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>56</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>123</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp$5 void onClick(android.view.View view)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Constant conditions &amp; exceptions</problem_class>
+    <description>Method invocation &lt;code&gt;getUid&lt;/code&gt; may produce &lt;code&gt;java.lang.NullPointerException&lt;/code&gt;</description>
+  </problem>
+</problems>
+

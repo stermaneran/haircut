@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Utils.java</file>
+    <line>55</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.Utils boolean hasText(android.support.design.widget.TextInputLayout inputLayout)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Boolean method is always inverted</problem_class>
+    <hints />
+    <description>Boolean method &lt;code&gt;hasText&lt;/code&gt; is always inverted</description>
+  </problem>
+</problems>
+

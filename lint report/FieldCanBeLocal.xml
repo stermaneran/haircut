@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>29</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.profilePage mFirebaseDatabase" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.profilePage mAuth" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>20</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter mContext" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PricelistPage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PricelistPage adapter" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PricelistPage.java</file>
+    <line>23</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PricelistPage itemDecoration" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/ShowAppointmentsPage.java</file>
+    <line>11</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.ShowAppointmentsPage recyclerView" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/ShowAppointmentsPage.java</file>
+    <line>14</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.ShowAppointmentsPage itemDecoration" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>25</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.logIn btnSignUp" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.logIn btnLogin" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage btnSignOut" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage btnREADME" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>24</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage myRef" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>25</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage user" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage btnaddApp" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage priceListBtn" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage btnMap" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>23</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage mFirebaseDatabase" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.basePage btnProfile" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/readme.java</file>
+    <line>10</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.readme box" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Field can be local</problem_class>
+    <description>Field can be converted to a local variable</description>
+  </problem>
+</problems>
+

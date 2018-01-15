@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml</file>
+    <line>16</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Reference to an id that is not in the current layout</problem_class>
+    <hints />
+    <description>&lt;html&gt;The id &quot;&lt;code&gt;profile_layout&lt;/code&gt;&quot; is not referring to any views in this layout&lt;/html&gt;</description>
+  </problem>
+</problems>
+

@@ -25,6 +25,7 @@ import java.util.Locale;
 
 public class addApp extends AppCompatActivity {
 
+    //STOPSHIP
     private FirebaseAuth mAuth;
     protected String datestr;
     protected String timestr;
@@ -118,12 +119,12 @@ public class addApp extends AppCompatActivity {
                 if (validateForm()) {
                     Appointment app = new Appointment(mAuth.getCurrentUser().getUid(), datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
 
+
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference ref = database.getReference("Appointments");
                     ref.child(mAuth.getCurrentUser().getUid()).setValue(app);
 
                     toastMessage("Appointment submitted");
-
 
                     Intent myIntent = new Intent(addApp.this, basePage.class);
                     startActivityForResult(myIntent, 0);
@@ -151,6 +152,4 @@ public class addApp extends AppCompatActivity {
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
-
 }

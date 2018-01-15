@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>53</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.displayed_name)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>59</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.user_photo)&lt;/code&gt; to &lt;code&gt;ImageView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>57</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.app)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>55</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.address)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>52</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.full_name)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>56</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.gender)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>54</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.email_field)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>58</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder PriceListViewHolder(android.view.View itemView)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;itemView.findViewById(R.id.haircutStyle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>56</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder PriceListViewHolder(android.view.View itemView)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;itemView.findViewById(R.id.haircutName)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>57</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder PriceListViewHolder(android.view.View itemView)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;itemView.findViewById(R.id.customer)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PricelistPage.java</file>
+    <line>34</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.PricelistPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.recyclerView)&lt;/code&gt; to &lt;code&gt;RecyclerView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/ShowAppointmentsPage.java</file>
+    <line>25</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.ShowAppointmentsPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.recyclerView)&lt;/code&gt; to &lt;code&gt;RecyclerView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>44</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.listv)&lt;/code&gt; to &lt;code&gt;ListView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>46</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.noapps)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>145</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;Date&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>145</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;Time&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>145</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;Email&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>144</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;LastName&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>144</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;Type&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>144</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;Email&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>144</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;singleUser.get(&quot;FirstName&quot;)&lt;/code&gt; to &lt;code&gt;String&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>41</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.listv)&lt;/code&gt; to &lt;code&gt;ListView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>83</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.timebox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>76</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.uploadImageBtn)&lt;/code&gt; to &lt;code&gt;ImageButton&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>87</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.addrTitle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>80</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.streetBox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>84</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.datebox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>77</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.passBox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>88</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.gender)&lt;/code&gt; to &lt;code&gt;ToggleButton&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>81</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.confPassBox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>85</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.profilePicTitle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>78</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.cityBox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>89</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.profilePictureView)&lt;/code&gt; to &lt;code&gt;ImageView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>82</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.unBox)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>75</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.submitBtn)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>86</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.registTitle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>79</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.registrationPage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.editText5)&lt;/code&gt; to &lt;code&gt;EditText&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.logIn void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.email_field)&lt;/code&gt; to &lt;code&gt;TextInputLayout&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.logIn void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.password_field)&lt;/code&gt; to &lt;code&gt;TextInputLayout&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.profle)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>41</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.addApp)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>42</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.usersb)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>44</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.btnPriceList)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>37</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.Map)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>38</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.btnSignOut)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.readme)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>43</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.apps)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/readme.java</file>
+    <line>16</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.readme void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.textView)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>41</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.pickDateBtn)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>43</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.dateTitle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>44</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.timeTitle)&lt;/code&gt; to &lt;code&gt;TextView&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.submitBtn)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/addApp.java</file>
+    <line>42</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.addApp void onCreate(android.os.Bundle savedInstanceState)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant type cast</problem_class>
+    <description>Casting &lt;code&gt;findViewById(R.id.pickTimeBtn)&lt;/code&gt; to &lt;code&gt;Button&lt;/code&gt; is redundant</description>
+  </problem>
+</problems>
+

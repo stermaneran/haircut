@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>12</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AppointmentDisplayItem _haircusStyle" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AppointmentDisplayItem _date" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>11</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AppointmentDisplayItem _custFullName" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>10</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AppointmentDisplayItem _time" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>13</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AppointmentDisplayItem _appDuration" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>52</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder haircutDuration" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>19</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter _haircutsList" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>51</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder haircutPrice" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>20</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter mContext" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>50</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PriceListAdapter.PriceListViewHolder haircutName" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PricelistPage.java</file>
+    <line>25</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.PricelistPage mRef" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AllApp uidl" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>31</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.AllUsers uidl" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>46</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.registrationPage SELECT_FILE" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/registrationPage.java</file>
+    <line>46</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="field" FQNAME="com.example.user.eran.registrationPage REQUEST_CAMERA" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+</problems>
+

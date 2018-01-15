@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>156</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage void toastMessage(java.lang.String message)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="message &quot;Signing Out...&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;message&lt;/code&gt;' is always '&lt;code&gt;&quot;Signing Out...&quot;&lt;/code&gt;'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Appointment.java</file>
+    <line>21</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.Appointment Appointment(java.lang.String cust, java.lang.String date, java.lang.String time, java.lang.String email, java.lang.String price)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Actual method parameter is the same constant</problem_class>
+    <hints>
+      <hint value="price &quot;100&quot;" />
+    </hints>
+    <description>Actual value of parameter '&lt;code&gt;price&lt;/code&gt;' is always '&lt;code&gt;&quot;100&quot;&lt;/code&gt;'</description>
+  </problem>
+</problems>
+

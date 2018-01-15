@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>51</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>61</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>73</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>83</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>95</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml</file>
+    <line>107</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml</file>
+    <line>27</line>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/res/layout/base_page.xml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Keyboard inaccessible widget</problem_class>
+    <hints />
+    <description>&lt;html&gt;'clickable' attribute found, please also add 'focusable'&lt;/html&gt;</description>
+  </problem>
+</problems>
+

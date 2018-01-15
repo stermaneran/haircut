@@ -1,30 +1,10 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in /Users/user/Library/Android/sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
 
-# Add any project specific keep options here:
+# We keep the method because the function is usefull for us.
+-keep class package com.example.user.eran.Haircut{
+   public void build();
+}
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
-
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
-
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
-
-
-# We keep the whole Haircut class because the program create new instances of this class in runtime.
-
--keep public class Haircut
+#_price is never directly refrenced but used
+-keep class package com.example.user.eran.Appointment{
+    String _price;
+}

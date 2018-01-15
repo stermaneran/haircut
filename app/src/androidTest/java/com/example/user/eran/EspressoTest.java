@@ -1,5 +1,6 @@
 package com.example.user.eran;
 
+import android.support.test.espresso.NoMatchingViewException;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.Before;
@@ -29,21 +30,14 @@ public class EspressoTest {
     //  Before runnimg the tests, we want the app to be on for sure.
     @Before
     public void holdOn() throws InterruptedException {
-        sleep(5000);
+        sleep(1000);
+        try{
+            onView(withId(R.id.btnSignOut)).perform(click());
+            sleep(1000);
+        }
+        catch (NoMatchingViewException e){}
+        sleep(1000);
     }
-
-    //  Checks the sign_in string appears on the first activity.
-    @Test
-    public void signInButtonAppears() throws InterruptedException {
-        onView((withText(R.string.Login))).check(matches(isDisplayed()));
-    }
-
-    //  Checks the sign_up string appears on the first activity.
-    @Test
-    public void signUpButtonAppears() throws InterruptedException {
-        onView((withText(R.string.Register))).check(matches(isDisplayed()));
-    }
-
 
     //  Checks that the user we added by the admin, succeeded loging in, and that the branches_text
     @Test
@@ -56,7 +50,25 @@ public class EspressoTest {
         pressBack();
         sleep(5000);
         onView(withId(R.id.login)).perform(click());
-        sleep(2000);
-        onView(withId(R.id.btnSignOut)).perform(click());
+        System.out.println("HERE");
+    }
+
+    //  Checks the sign_in string appears on the first activity.
+    @Test
+    public void signInButtonAppears() throws InterruptedException {
+        onView((withText(R.string.Login))).check(matches(isDisplayed()));
+    }
+
+    //  Checks the sign_up string appears on the first activity.
+    @Test
+    public void signUpButtonAppears() throws InterruptedException {
+        sleep(1000);
+        try{
+            onView(withId(R.id.btnSignOut)).perform(click());
+            sleep(1000);
+        }
+        catch (NoMatchingViewException e){}
+        sleep(1000);
+        onView((withText(R.string.Register))).check(matches(isDisplayed()));
     }
 }

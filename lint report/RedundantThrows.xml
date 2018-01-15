@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>125</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.profilePage android.graphics.Bitmap decodeFromFirebaseBase64(java.lang.String image)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Redundant throws clause</problem_class>
+    <hints>
+      <hint value="IOException" />
+    </hints>
+    <description>The declared exception &lt;code&gt;IOException&lt;/code&gt; is never thrown</description>
+  </problem>
+</problems>
+

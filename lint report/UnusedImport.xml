@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/logIn.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused import</problem_class>
+    <description>Unused import &lt;code&gt;import android.content.Context;&lt;/code&gt; #loc</description>
+  </problem>
+</problems>
+

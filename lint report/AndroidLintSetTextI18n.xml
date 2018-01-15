@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>103</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>103</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>104</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>104</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>105</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>105</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>106</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>106</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>107</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>107</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>117</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>117</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>117</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java</file>
+    <line>119</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/profilePage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>39</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;Do not concatenate text displayed with &lt;code&gt;setText&lt;/code&gt;. Use resource string with placeholders.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>40</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">TextView Internationalization</problem_class>
+    <hints />
+    <description>&lt;html&gt;String literal in &lt;code&gt;setText&lt;/code&gt; can not be translated. Use Android resources instead.&lt;/html&gt;</description>
+  </problem>
+</problems>
+

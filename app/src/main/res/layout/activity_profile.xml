@@ -115,7 +115,8 @@
                 android:layout_marginTop="30dp"
                 android:background="@android:color/holo_blue_dark"
                 android:text="EDIT INFO"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllApp.java</file>
+    <line>154</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllApp void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AllUsers.java</file>
+    <line>153</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.AllUsers void collectEmails(java.util.Map&lt;java.lang.String,java.lang.Object&gt; users)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Explicit type can be replaced with &lt;&gt;</problem_class>
+    <description>Explicit type argument String can be replaced with &lt;&gt;</description>
+  </problem>
+</problems>
+

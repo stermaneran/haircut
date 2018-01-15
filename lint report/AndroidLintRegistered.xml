@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/ShowAppointmentsPage.java</file>
+    <line>9</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/ShowAppointmentsPage.java" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Class is not registered in the manifest</problem_class>
+    <hints />
+    <description>&lt;html&gt;The &lt;code&gt;&amp;lt;activity&gt; com.example.user.eran.ShowAppointmentsPage&lt;/code&gt; is not registered in the manifest&lt;/html&gt;</description>
+  </problem>
+</problems>
+

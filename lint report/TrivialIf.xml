@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/basePage.java</file>
+    <line>163</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="method" FQNAME="com.example.user.eran.basePage boolean isAdmin(com.google.firebase.database.DataSnapshot dataSnapshot)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant 'if' statement</problem_class>
+    <description>&lt;code&gt;if&lt;/code&gt; statement can be simplified #loc</description>
+  </problem>
+</problems>
+

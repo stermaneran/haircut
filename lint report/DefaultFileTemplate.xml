@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Utils.java</file>
+    <line>16</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.Utils" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/AppointmentDisplayItem.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.AppointmentDisplayItem" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/PriceListAdapter.java</file>
+    <line>12</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.PriceListAdapter" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Haircut.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.Haircut" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/JSONParser.java</file>
+    <line>6</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.JSONParser" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Customer.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.Customer" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Appointment.java</file>
+    <line>3</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.Appointment" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/app/src/main/java/com/example/user/eran/Analytics.java</file>
+    <line>8</line>
+    <module>app</module>
+    <package>com.example.user.eran</package>
+    <entry_point TYPE="class" FQNAME="com.example.user.eran.Analytics" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Default File Template Usage</problem_class>
+    <description>Default File template</description>
+  </problem>
+</problems>
+
