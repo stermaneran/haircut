@@ -24,10 +24,11 @@ def register_user(email, password):
         return
 
     try:
-        user = firebase.auth().create_user_with_email_and_password(email,password)
+        user = firebase.auth().create_user_with_email_and_password(email, password)
         uid = user['localId']
         ref = db.reference().child('Users').child(uid)
-        ref.child("Photo").set("https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4")
+        ref.child("Photo").set(
+            "https://firebasestorage.googleapis.com/v0/b/babershop-b43c6.appspot.com/o/profiles%2Fdefault.png?alt=media&token=9a5842a7-569e-4ca2-b0f8-6c5274933de4")
         ref.child('Email').set(email)
         ref.child('Password').set(password)
         ref.child('FirstName').set(input("Enter First Name: "))
@@ -48,14 +49,13 @@ def register_user(email, password):
         ref.child('City').set(input("Enter City: "))
         ref.child('Street').set(input("Enter street: "))
         print("\n[Info]: User " + email + " Added")
-    except (db.ApiCallError, db.TransactionError ,HTTPError):
+    except (db.ApiCallError, db.TransactionError, HTTPError):
         print("\n[Info]: An error occurred")
     return
 
 
 #  Remove a user given the User Name as the argument.
 def remove_user(email):
-
     if not user_exists(email):
         print("\n[Error]: User '{}' not found".format(email))
         return
@@ -65,7 +65,7 @@ def remove_user(email):
         for ch in users.get():
             testMail = users.child(ch).child("Email").get()
             if testMail == email:
-                uid=ch
+                uid = ch
         auth.delete_user(uid)
         db.reference().child('Users').child(uid).delete()
         print("\n[Info]: User:" + email + " Deleted")
@@ -88,13 +88,12 @@ def user_exists(email):
 
 #  Prints all of the system's users one by one.
 def get_all_users():
-    ref = db.reference('Users')
     users = db.reference('Users')
     num = 1
     try:
         print("\n[Status]: Loading users data..")
         for ch in users.get():
-            print("\nUser {}: ".format(num)+ "\nFirst Name:" + users.child(ch).child("FirstName").get())
+            print("\nUser {}: ".format(num) + "\nFirst Name:" + users.child(ch).child("FirstName").get())
             print("Last Name:" + users.child(ch).child("LastName").get())
             print("User Name:" + users.child(ch).child("UserName").get())
             print("Email:" + users.child(ch).child("Email").get())
@@ -111,7 +110,6 @@ def get_all_users():
 
 #  Adds Photo to a user.
 def add_Photo(email, path):
-
     users = db.reference('Users')
     for ch in users.get():
         testMail = users.child(ch).child("Email").get()
@@ -122,7 +120,7 @@ def add_Photo(email, path):
     user = auth.sign_in_with_email_and_password("admin@gmail.com", "admin12")
     storage = firebase.storage()
     try:
-        ending = users.child(uid).child("Photo").get()[85+len(uid):85+len(uid)+3]
+        ending = users.child(uid).child("Photo").get()[85 + len(uid):85 + len(uid) + 3]
         storage.child("profiles/" + uid + ending).put(path, user['idToken'])
         url = storage.child("profiles/" + uid + ending).get_url('BarberShop')
         users.child(uid).child("Photo").set(url)
@@ -146,6 +144,12 @@ def clear_users():
     except TypeError:
         print("\n[Info]: No registered users available")
 
+    try:
+        db.reference('Appointments').delete()
+    except (db.ApiCallError, db.TransactionError):
+        print("\n[Info]: An error occurred")
+    except TypeError:
+        print("\n[Info]: No registered Appointments")
 
 #  Menu constants:
 #  ---------------
@@ -185,9 +189,9 @@ def menu():
 def main():
     print("""
 +----------------------------------------------+
-|             Hello and welcome to             |         
-|      'Shalom Barber Shop' Sefis Father"      |                 
-|                    Server                    | 
+|             Hello and welcome to             |
+|      'Shalom Barber Shop' Sefis Father"      |
+|                    Server                    |
 +----------------------------------------------+
     """)
     print("+--Menu--+")
@@ -221,22 +225,21 @@ def main():
             valid_choice = True
             while valid_choice:
                 choice = input("[Y] Yes [N] No: ")
-                if choice == 'Y':
+                if choice == 'Y' or choice == 'y' or choice == 'yes':
                     clear_users()
                     valid_choice = False
-                elif choice == 'N':
+                elif choice == 'N' or choice == 'n' or choice == 'no':
                     valid_choice = False
                 else:
                     print("Invalid choice!")
 
         elif choice == ADD_ITEM:
             email = input("Enter Email: ")
-            if  user_exists(email):
+            if user_exists(email):
                 path = input("Enter Photo Path: ")
                 add_Photo(email, path)
             else:
                 print("\n[Error]: User {} not found".format(email))
-
 
         choice = menu()
 
@@ -244,7 +247,6 @@ def main():
 
 
 if __name__ == '__main__':
-
     cred = credentials.Certificate("cred.json")
     app = firebase_admin.initialize_app(cred, {'databaseURL': "https://babershop-b43c6.firebaseio.com"})
 

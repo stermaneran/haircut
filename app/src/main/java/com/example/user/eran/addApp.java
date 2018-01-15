@@ -117,7 +117,7 @@ public class addApp extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (validateForm()) {
-                    Appointment app = new Appointment(mAuth.getCurrentUser().getUid(), datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
+                    Appointment app = new Appointment(datestr, timestr, mAuth.getCurrentUser().getEmail(), "100");
 
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();

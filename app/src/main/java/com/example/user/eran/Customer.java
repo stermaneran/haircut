@@ -6,7 +6,7 @@ package com.example.user.eran;
 
     public class Customer {
 
-    public String FirstName, LastName, UserName, Email, Password, Street, City, id, imagePath, Type, gender;
+    public String FirstName, LastName, UserName, Email, Password, Street, City, id, Photo, Type, Gender;
 
     public Customer() {
         //for fire base
@@ -23,8 +23,8 @@ package com.example.user.eran;
         this.Street = street;
         this.City = city;
         this.id = id;
-        this.imagePath = path;
-        this.gender = gender;
+        this.Photo = path;
+        this.Gender = gender;
         this.Type = "Non-Admin";
 
     }

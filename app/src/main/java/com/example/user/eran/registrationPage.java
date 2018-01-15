@@ -135,7 +135,6 @@ public class registrationPage extends AppCompatActivity {
                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                      DatabaseReference ref = database.getReference("Users");
                                      ref.child(mAuth.getCurrentUser().getUid()).setValue(c);
-                                    logRegistration();
                                     Intent myIntent = new Intent(registrationPage.this, logIn.class);
                                     startActivityForResult(myIntent, 0);
                                     finish();
@@ -191,6 +190,9 @@ public class registrationPage extends AppCompatActivity {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(data==null){
+            return;
+        }
         filePath=data.getData();
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -418,8 +420,5 @@ public class registrationPage extends AppCompatActivity {
             startActivityForResult(myIntent, 0);
             finish();
         }
-    }
-    void logRegistration(){
-        Analytics.logEventSignUp(this);
     }
 }

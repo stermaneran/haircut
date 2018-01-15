@@ -90,17 +90,17 @@ public class profilePage extends AppCompatActivity {
     private void showData(DataSnapshot dataSnapshot) {
         dataSnapshot = dataSnapshot.child("Users").child(userID);
         Customer uInfo = dataSnapshot.getValue(Customer.class);
-        if (!uInfo.imagePath.contains("http")) {
+        if (!uInfo.Photo.contains("http")) {
             try {
-                Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.imagePath);
+                Bitmap imageBitmap = decodeFromFirebaseBase64(uInfo.Photo);
                 imageView.setImageBitmap(imageBitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
-            Picasso.with(profilePage.this).load(uInfo.imagePath).into(imageView);
+            Picasso.with(profilePage.this).load(uInfo.Photo).into(imageView);
         }
-        gender.setText("Gender: " + uInfo.gender);
+        gender.setText("Gender: " + uInfo.Gender);
         mfull_name.setText("Full Name: " + uInfo.FirstName + " " + uInfo.LastName);
         mdisplayed_name.setText("User Name: " + uInfo.UserName);
         memail_field.setText("Email: " + user.getEmail());
@@ -114,7 +114,7 @@ public class profilePage extends AppCompatActivity {
         Appointment uInfo = dataSnapshot.getValue(Appointment.class);
 
         if (dataSnapshot.getValue() != null) {
-            mapp.setText("Appointment: " + uInfo._date + " at " + uInfo._time);
+            mapp.setText("Appointment: " + uInfo.Date + " at " + uInfo.Time);
         } else {
             mapp.setText("No Appointments set");
         }

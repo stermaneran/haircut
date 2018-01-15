@@ -6,11 +6,10 @@ package com.example.user.eran;
 
 public class Appointment {
 
-    String _price;
-    String _date;
-    String _time;
-    String _email;
-    String _cust;
+    String Price;
+    String Date;
+    String Time;
+    String Email;
 
 
     public Appointment() {
@@ -18,11 +17,10 @@ public class Appointment {
     }
 
 
-    public Appointment(String cust, String date, String time, String email, String price) {
-        _date = date;
-        _time = time;
-        _email = email;
-        _price = price;
-        _cust = cust;
+    public Appointment(String date, String time, String email, String price) {
+        Date = date;
+        Time = time;
+        Email = email;
+        Price = price;
     }
 }

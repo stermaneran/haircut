@@ -110,7 +110,6 @@ public class AllApp extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected (MenuItem item){
-        // TODO Auto-generated method stub
         switch (item.getItemId()) {
             case CONTEXT_MENU_DELETE: {
                 try {
