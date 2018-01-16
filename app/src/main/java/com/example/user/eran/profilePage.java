@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
-
+//displays a users profile
 public class profilePage extends AppCompatActivity {
 
     private static final String TAG = "ViewDatabase";
@@ -68,7 +68,9 @@ public class profilePage extends AppCompatActivity {
         //get current user
         user = mAuth.getCurrentUser();
 
-        userID = user.getUid();
+        if (user != null) {
+            userID = user.getUid();
+        }
 
         // Read from the database
         listener = myRef.addValueEventListener(new ValueEventListener() {
@@ -87,6 +89,10 @@ public class profilePage extends AppCompatActivity {
 
     }
 
+    /**
+     * present the users profile data
+     * @param dataSnapshot of current database state
+     */
     private void showData(DataSnapshot dataSnapshot) {
         dataSnapshot = dataSnapshot.child("Users").child(userID);
         Customer uInfo = dataSnapshot.getValue(Customer.class);
@@ -107,7 +113,10 @@ public class profilePage extends AppCompatActivity {
         maddress.setText("Address: " + uInfo.Street + ", " + uInfo.City);
     }
 
-
+    /**
+     * present the users appointment data
+     * @param dataSnapshot of current database state
+     */
     private void showApp(DataSnapshot dataSnapshot) {
 
         dataSnapshot = dataSnapshot.child("Appointments").child(userID);
@@ -121,12 +130,23 @@ public class profilePage extends AppCompatActivity {
 
     }
 
-
+    /**
+     * decode picture
+     * @param image to decode
+     * @return the decoded string as bitmap
+     * @throws IOException
+     */
     public static Bitmap decodeFromFirebaseBase64(String image) throws IOException {
         byte[] decodedByteArray = android.util.Base64.decode(image, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(decodedByteArray, 0, decodedByteArray.length);
     }
 
+    /**
+     * close the activity when back is pressed
+     * @param keyCode
+     * @param event
+     * @return
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {

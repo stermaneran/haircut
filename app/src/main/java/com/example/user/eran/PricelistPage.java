@@ -15,6 +15,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Sefi on 21/12/2017.
+ * displays haircut prices
+ */
+
 public class PricelistPage extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -50,7 +55,13 @@ public class PricelistPage extends AppCompatActivity {
         });
     }
 
+    /**
+     * iterates over all haircut types and adds them to are list
+     *
+     * @param dataSnapshot of the current database
+     */
     public void showList(DataSnapshot dataSnapshot) {
+//      if the database crashes
 //      Haircut haircut1 = new Haircut("","","");
 //      haircut1.build();
         for (DataSnapshot haircutEntry : dataSnapshot.getChildren()) {

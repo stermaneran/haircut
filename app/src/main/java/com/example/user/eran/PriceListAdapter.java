@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by Sefi on 21/12/2017.
+ * adapts the displayed item to the list
  */
 
 public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.PriceListViewHolder> {
@@ -19,7 +20,12 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
     private List<Haircut> _haircutsList;
     private Context mContext;
 
-
+    /**
+     * ctor
+     *
+     * @param haircutsList list of haircut items
+     * @param context      current state of the application
+     */
     protected PriceListAdapter(List<Haircut> haircutsList, Context context) {
         _haircutsList = haircutsList;
         mContext = context;
@@ -45,12 +51,20 @@ public class PriceListAdapter extends RecyclerView.Adapter<PriceListAdapter.Pric
         return _haircutsList.size();
     }
 
+    /**
+     * represents the object we show in the list
+     */
     protected class PriceListViewHolder extends RecyclerView.ViewHolder {
 
         TextView haircutName;
         TextView haircutPrice;
         TextView haircutDuration;
 
+        /**
+         * ctor
+         *
+         * @param itemView
+         */
         public PriceListViewHolder(View itemView) {
             super(itemView);
             haircutName = (TextView) itemView.findViewById(R.id.haircutName);

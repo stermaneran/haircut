@@ -20,8 +20,6 @@ import static java.lang.Thread.sleep;
 
 public class EspressoTest {
 
-
-
     //  This rule provides functional testing of a single Activity.
     @Rule
     public ActivityTestRule<logIn> mActivityRule =

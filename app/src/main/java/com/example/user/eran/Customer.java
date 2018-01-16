@@ -1,17 +1,24 @@
 package com.example.user.eran;
 
 /**
- * Created by eran on 01/11/2017.
+ * Created by shay on 19/12/17.
+ * represents a customer object
  */
 
-    public class Customer {
+public class Customer {
 
-    public String FirstName, LastName, UserName, Email, Password, Street, City, id, Photo, Type, Gender;
+    String FirstName, LastName, UserName, Email, Password, Street, City, id, Photo, Type, Gender;
 
+    /**
+     * default ctor
+     */
     public Customer() {
         //for fire base
     }
 
+    /**
+     * ctor
+     */
     public Customer(String fname, String lname, String uname, String email,
                     String password, String street, String city, String id, String path, String gender) {
 

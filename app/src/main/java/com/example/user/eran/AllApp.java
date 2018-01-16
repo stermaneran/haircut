@@ -22,6 +22,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
+/**
+ * /this activity presents all appointments in the database for Admin users only
+ */
 public class AllApp extends AppCompatActivity {
 
     private ListView users;
@@ -45,19 +48,19 @@ public class AllApp extends AppCompatActivity {
 
         mnoapps = (TextView) findViewById(R.id.noapps);
 
+        //listener to firebase reference
         ref.addListenerForSingleValueEvent(
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         //Get map of users in datasnapshot
-                        Map<String,Object> usersMap= (Map<String, Object>) dataSnapshot.getValue();
+                        Map<String, Object> usersMap = (Map<String, Object>) dataSnapshot.getValue();
 
-                        if(usersMap!=null) {
+                        if (usersMap != null) {
                             mnoapps.setVisibility(View.GONE);
                             collectEmails(usersMap);
                             users.setAdapter(myListAdapter);
-                        }
-                        else{
+                        } else {
                             mnoapps.setVisibility(View.VISIBLE);
                         }
 
@@ -69,12 +72,12 @@ public class AllApp extends AppCompatActivity {
                     }
                 });
 
-
+        //on click of an appointment
         users.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selectedFromList =(users.getItemAtPosition(position).toString());
-                selectedUid= getUid(selectedFromList);
+                String selectedFromList = (users.getItemAtPosition(position).toString());
+                selectedUid = getUid(selectedFromList);
                 registerForContextMenu(users);
                 openContextMenu(users);
             }
@@ -83,25 +86,27 @@ public class AllApp extends AppCompatActivity {
 
     }
 
+    /**
+     * finds uid in given string
+     * @param selectedFromList the appointment selected
+     * @return users uid given by the authentication
+     */
     private String getUid(String selectedFromList) {
-        int start = selectedFromList.indexOf("\n") +1;
-        String mail=selectedFromList.substring(start);
+        int start = selectedFromList.indexOf("\n") + 1;
+        String mail = selectedFromList.substring(start);
 
-        for (String id:uidl)
-        {
-            if (id.contains(mail))
-            {
-                String ans= id.substring(0, id.indexOf("="));
+        for (String id : uidl) {
+            if (id.contains(mail)) {
+                String ans = id.substring(0, id.indexOf("="));
                 return ans;
             }
         }
         return "null";
     }
 
-
     @Override
-    public void onCreateContextMenu (ContextMenu menu, View
-            v, ContextMenu.ContextMenuInfo menuInfo){
+    public void onCreateContextMenu(ContextMenu menu, View
+            v, ContextMenu.ContextMenuInfo menuInfo) {
         //Context menu
         menu.setHeaderTitle("Menu");
         menu.add(Menu.NONE, CONTEXT_MENU_DELETE, Menu.NONE, "Delete Appointment");
@@ -109,11 +114,12 @@ public class AllApp extends AppCompatActivity {
     }
 
     @Override
-    public boolean onContextItemSelected (MenuItem item){
+    public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case CONTEXT_MENU_DELETE: {
                 try {
-                    ref.child(selectedUid).removeValue();;
+                    ref.child(selectedUid).removeValue();
+                    ;
                     finish();
                     startActivity(getIntent());
                 } catch (Exception e) {
@@ -131,17 +137,22 @@ public class AllApp extends AppCompatActivity {
         return super.onContextItemSelected(item);
     }
 
-    private void collectEmails(Map<String,Object> users) {
+    /**
+     * extracts the relevant data from the appointment
+     *
+     * @param apps map of appointment objects
+     */
+    private void collectEmails(Map<String, Object> apps) {
 
         ArrayList<String> usersApp = new ArrayList<>();
 
         //iterate through each user, ignoring their UID
-        for (Map.Entry<String, Object> entry : users.entrySet()){
+        for (Map.Entry<String, Object> entry : apps.entrySet()) {
 
             //Get user map
             Map singleUser = (Map) entry.getValue();
 
-            String app =  (String) singleUser.get("Date") + "  " + (String) singleUser.get("Time") + "\n" +(String) singleUser.get("Email");
+            String app = (String) singleUser.get("Date") + "  " + (String) singleUser.get("Time") + "\n" + (String) singleUser.get("Email");
             usersApp.add(app);
             String uidnum = entry.toString();
             uidl.add(uidnum);

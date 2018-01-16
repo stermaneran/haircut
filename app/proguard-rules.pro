@@ -1,4 +1,3 @@
-
 # We keep the method because the function is usefull for us.
 -keep class package com.example.user.eran.Haircut{
    public void build();

@@ -16,16 +16,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * main menu for all application's features
+ */
 public class basePage extends AppCompatActivity {
 
-    private Button btnSignOut,btnProfile,btnMap,btnREADME,btnaddApp,btnusers,appsm,priceListBtn;
+    private Button btnSignOut, btnProfile, btnMap, btnREADME, btnaddApp, btnusers, appsm, priceListBtn;
     private FirebaseAuth mAuth;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
     private FirebaseUser user;
     private String userID;
     private static final String TAG = "ViewUser";
-
 
 
     @Override
@@ -37,14 +39,14 @@ public class basePage extends AppCompatActivity {
         btnMap = (Button) findViewById(R.id.Map);
         btnSignOut = (Button) findViewById(R.id.btnSignOut);
         btnProfile = (Button) findViewById(R.id.profle);
-        btnREADME= (Button) findViewById(R.id.readme);
-        btnaddApp= (Button) findViewById(R.id.addApp);
-        btnusers= (Button) findViewById(R.id.usersb);
-        appsm= (Button) findViewById(R.id.apps);
+        btnREADME = (Button) findViewById(R.id.readme);
+        btnaddApp = (Button) findViewById(R.id.addApp);
+        btnusers = (Button) findViewById(R.id.usersb);
+        appsm = (Button) findViewById(R.id.apps);
         priceListBtn = (Button) findViewById(R.id.btnPriceList);
 
 
-        mAuth=FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -53,15 +55,14 @@ public class basePage extends AppCompatActivity {
         //get current user
         user = mAuth.getCurrentUser();
 
-//        if(user!=null) {
-            userID = user.getUid();
-//        }
+        userID = user.getUid();
+
         // Read from the database
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                if(isAdmin(dataSnapshot)){
+                if (isAdmin(dataSnapshot)) {
                     btnusers.setVisibility(View.VISIBLE);
                     appsm.setVisibility(View.VISIBLE);
                 }
@@ -75,7 +76,7 @@ public class basePage extends AppCompatActivity {
         });
 
 
-
+        //user sign out
         btnSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,86 +87,87 @@ public class basePage extends AppCompatActivity {
                 finish();
             }
         });
+        //start mapsActivity activity
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(basePage.this, mapsActivity.class);
                 startActivityForResult(myIntent, 0);
-                //finish();
             }
         });
-
+        //start addApp activity
         btnaddApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(basePage.this, addApp.class);
                 startActivityForResult(myIntent, 0);
-                //finish();
             }
         });
-
-        btnProfile.setOnClickListener(new View.OnClickListener(){
+        //start profilePage activity
+        btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(basePage.this, profilePage.class);
                 startActivityForResult(i, 0);
-                //finish();
             }
         });
-
-        btnREADME.setOnClickListener(new View.OnClickListener(){
+        //start readme activity
+        btnREADME.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(basePage.this, readme.class);
                 startActivityForResult(i, 0);
-                //finish();
             }
         });
-
-        btnusers.setOnClickListener(new View.OnClickListener(){
+        //start AllUsers activity
+        btnusers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(basePage.this, AllUsers.class);
                 startActivityForResult(i, 0);
-                //finish();
             }
         });
-
-        appsm.setOnClickListener(new View.OnClickListener(){
+        //start AllApp activity
+        appsm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(basePage.this, AllApp.class);
                 startActivityForResult(i, 0);
-                //finish();
             }
         });
-
-        priceListBtn.setOnClickListener(new View.OnClickListener(){
+        //start PricelistPage activity
+        priceListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(basePage.this, PricelistPage.class);
                 startActivityForResult(i, 0);
-                //finish();
             }
         });
 
     }
 
-
-
-
-    private void toastMessage(String message){
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+    /**
+     * presenting a message to the user
+     *
+     * @param message
+     */
+    private void toastMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * test if user type is Admin
+     *
+     * @param dataSnapshot of current database
+     * @return true if Admin
+     */
     private boolean isAdmin(DataSnapshot dataSnapshot) {
         try {
             dataSnapshot = dataSnapshot.child("Users").child(userID);
             if (dataSnapshot.child("Type").getValue().toString().equals("Admin")) {
                 return true;
             } else return false;
-        }
-        catch(java.lang.NullPointerException e){
+        } catch (java.lang.NullPointerException e) {
             return false;
         }
     }

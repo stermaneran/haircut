@@ -7,12 +7,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
-/**
- * Created by Damir and Leora on 9/11/2017.
- *
- * Mockito test, checks the functions of the application.
- *
- */
 
 public class MockitoTest {
 

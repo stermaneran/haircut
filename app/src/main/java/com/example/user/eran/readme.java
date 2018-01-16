@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
+/**
+ * Created by DIMAVO on 21/12/2017.
+ * displays readme page
+ */
 public class readme extends AppCompatActivity {
 
     private TextView box;
@@ -12,11 +16,7 @@ public class readme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_readme);
-
         box =(TextView)findViewById(R.id.textView);
-
         box.setMovementMethod(new ScrollingMovementMethod());
-
-
     }
 }

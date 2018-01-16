@@ -1,4 +1,5 @@
 package com.example.user.eran;
+
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +18,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * logIn to the application
+ */
 public class logIn extends AppCompatActivity {
 
     private TextInputLayout emailField;
@@ -44,7 +48,9 @@ public class logIn extends AppCompatActivity {
         //Get Firebase auth instance
         mAuth = FirebaseAuth.getInstance();
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
+        //checks if the user is already registered in the system
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -58,11 +64,10 @@ public class logIn extends AppCompatActivity {
                 } else {
                     // User is signed out
                 }
-
             }
         };
 
-
+        //start registrationPage activity
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +76,8 @@ public class logIn extends AppCompatActivity {
             }
         });
 
+        //validates the input and passes valid users to authenticateUser
+        //and returns the correct message if not
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,15 +90,17 @@ public class logIn extends AppCompatActivity {
                     showProcessDialog();
                     authenticateUser(Utils.getText(emailField), Utils.getText(passwordField));
 
-
-
-
-
                 }
             }
         });
     }
 
+    /**
+     * authenticate User with Firebase
+     *
+     * @param email
+     * @param password start basePage activity upon success
+     */
     private void authenticateUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(logIn.this, new OnCompleteListener<AuthResult>() {
@@ -112,6 +121,9 @@ public class logIn extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Process Dialog for Firebase logIn
+     */
     private void showProcessDialog() {
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Login");
@@ -119,22 +131,24 @@ public class logIn extends AppCompatActivity {
         progressDialog.show();
     }
 
+    /**
+     * checks if the user has not loged out
+     */
     @Override
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
 
+    /**
+     * saves current user's authentication state
+     */
     @Override
     public void onStop() {
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
-    }
-
-    private void toastMessage(String message){
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
     }
 
 }

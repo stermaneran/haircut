@@ -40,21 +40,14 @@ import com.google.firebase.storage.UploadTask;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-
+//regenerating to application
 public class registrationPage extends AppCompatActivity {
 
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private String imageEncoded;
     private StorageReference mStorageRef;
     private Uri filePath;
-    private  String fname ;
-    private  String lname ;
-    private  String uname;
-    private  String email ;
-    private  String pass1 ;
-    private  String pass2 ;
-    private  String street;
-    private  String city ;
+    private String fname, lname, uname, email, pass1, pass2, street,city ;
 
     private FirebaseAuth mAuth;
     Button submitBtn;
@@ -95,7 +88,7 @@ public class registrationPage extends AppCompatActivity {
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-
+        //start onProfileImageViewClick function
         uploadImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,7 +96,7 @@ public class registrationPage extends AppCompatActivity {
             }
         });
 
-
+        //listener to submit button
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,10 +115,10 @@ public class registrationPage extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
 
-
                                 if (imageEncoded == null)
                                     uploadFile();
                                 else {
+
                                     String g = genderTgl.getText().toString();
 
                                     mFirebaseAnalytics.setUserProperty("my_city", city);
@@ -144,13 +137,16 @@ public class registrationPage extends AppCompatActivity {
                             }
                         }
                     });
-
-
                 }
             }
         });
     }
 
+    /**
+     * upload picture menu
+     * starts selected intent (Take Photo/Choose from Library/Cancel)
+     * @param v
+     */
     public void onProfileImageViewClick(View v) {
             final CharSequence[] items = { "Take Photo", "Choose from Library", "Cancel" };
             AlertDialog.Builder builder = new AlertDialog.Builder(registrationPage.this);
@@ -159,7 +155,6 @@ public class registrationPage extends AppCompatActivity {
             @Override
                 public void onClick(DialogInterface dialog, int item) {
                     boolean result=Utils.checkPermission(registrationPage.this);
-
                     if (items[item].equals("Take Photo")) {
                         if(result)
                             cameraIntent();
@@ -174,6 +169,9 @@ public class registrationPage extends AppCompatActivity {
 		    builder.show();
     }
 
+    /**
+     * opens gallery in local device
+     */
     private void galleryIntent()
     {
         Intent intent = new Intent();
@@ -182,12 +180,21 @@ public class registrationPage extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select File"),SELECT_FILE);
     }
 
+    /**
+     * opens camera in local device
+     */
     private void cameraIntent()
     {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, REQUEST_CAMERA);
     }
 
+    /**
+     * test result code for camera/gallery intent
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(data==null){
@@ -204,6 +211,11 @@ public class registrationPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * when returned from camera intent
+     * uploads the picture to Firebase
+     * @param data the picture data
+     */
     private void onCaptureImageResult(Intent data) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
@@ -212,12 +224,21 @@ public class registrationPage extends AppCompatActivity {
             encodeBitmapAndSaveToFirebase(imageBitmap);
     }
 
+    /**
+     * endecode picture
+     * @param bitmap to encode
+     */
     private void encodeBitmapAndSaveToFirebase(Bitmap bitmap) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
         imageEncoded = Base64.encodeToString(baos.toByteArray(), Base64.DEFAULT);
         }
 
+    /**
+     * when returned from gallery intent
+     * tests for valid type (jpeg/png/jpg)
+     * @param data the picture data
+     */
     @SuppressWarnings("deprecation")
     private void onSelectFromGalleryResult(Intent data) {
         ContentResolver cR = this.getContentResolver();
@@ -255,7 +276,18 @@ public class registrationPage extends AppCompatActivity {
         }
     }
 
-    // to check if user filled all the required fieds
+    /**
+     * to check if user filled all the required fieds
+     * @param fname
+     * @param lname
+     * @param uname
+     * @param email
+     * @param pass1
+     * @param pass2
+     * @param street
+     * @param city
+     * @return true when valid
+     */
     public boolean validateForm(String fname, String lname, String uname, String email, String pass1, String pass2, String street, String city) {
         boolean alldone = true;
         if (TextUtils.isEmpty(fname)) {
@@ -289,29 +321,24 @@ public class registrationPage extends AppCompatActivity {
         } else {
             cityBox.setError(null);
         }
-
-
         if (TextUtils.isEmpty(email)) {
             emailBox.setError("invalid your email");
             alldone = false;
         } else {
             emailBox.setError(null);
         }
-
         if (TextUtils.isEmpty(pass1)) {
             passBox.setError("Enter your password");
             return false;
         } else {
             passBox.setError(null);
         }
-
         if (TextUtils.isEmpty(pass2)) {
             confPassBox.setError("Enter your password");
             return false;
         } else {
             confPassBox.setError(null);
         }
-
         if (pass1.length() < 6) {
             confPassBox.setError("password must be at least 6 characters");
             passBox.setError("password must be at least 6 characters");
@@ -320,7 +347,6 @@ public class registrationPage extends AppCompatActivity {
             confPassBox.setError(null);
             passBox.setError(null);
         }
-
         if (!pass1.equals(pass2)) {
             confPassBox.setError("passwords dont match");
             passBox.setError("passwords dont match");
@@ -329,15 +355,21 @@ public class registrationPage extends AppCompatActivity {
             confPassBox.setError(null);
             passBox.setError(null);
         }
-
-
         return alldone;
     }
 
+    /**
+     * presenting a message to the user
+     *
+     * @param message
+     */
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * upload the data to Firebase
+     */
     private void uploadFile() {
         //if there is a file to upload
         if (filePath != null) {

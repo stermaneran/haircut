@@ -16,6 +16,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
+/**
+ * google maps api activity
+ */
 public class mapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -28,11 +31,7 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
     }
-
-
 
     @SuppressLint("MissingPermission")
     @Override
@@ -54,10 +53,11 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
         }
     }
-    private void toastMessage(String message){
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
-    }
 
+    /**
+     *  test if we have the correct permissions and request them if not
+     * @param googleMap
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -70,6 +70,12 @@ public class mapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    /**
+     * close the activity when back is pressed
+     * @param keyCode
+     * @param event
+     * @return
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {

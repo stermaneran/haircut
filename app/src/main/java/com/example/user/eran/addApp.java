@@ -22,10 +22,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-
+/**
+ * /this activity adds appointments to the database by user id
+ */
 public class addApp extends AppCompatActivity {
 
+    // *******
+    // for the use of lint
     //STOPSHIP
+    // *******
+
     private FirebaseAuth mAuth;
     protected String datestr;
     protected String timestr;
@@ -83,6 +89,7 @@ public class addApp extends AppCompatActivity {
             }
         });
 
+        // time picker dialog
         pickTimeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +97,7 @@ public class addApp extends AppCompatActivity {
                 final Calendar c = Calendar.getInstance();
                 final int mHour = c.get(Calendar.HOUR_OF_DAY);
                 final int mMinutes = c.get(Calendar.MINUTE);
-                // date picker dialog
+                // time picker dialog
                 TimePickerDialog timePicker = new TimePickerDialog(addApp.this,
                         new TimePickerDialog.OnTimeSetListener() {
 
@@ -112,6 +119,7 @@ public class addApp extends AppCompatActivity {
             }
         });
 
+        //submits the appointment to the data base
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,6 +143,11 @@ public class addApp extends AppCompatActivity {
 
     }
 
+    /**
+     * tests if the date and time are valid
+     * @return
+     * true if valid
+     */
     public boolean validateForm() {
         if (datestr == null) {
             toastMessage("Enter Date");
@@ -146,10 +159,14 @@ public class addApp extends AppCompatActivity {
             return false;
         }
         return true;
-
     }
 
+    /**
+     * presenting a message to the user
+     * @param message
+     */
     private void toastMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
+
